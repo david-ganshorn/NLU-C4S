@@ -1,13 +1,5 @@
-# ======================================================================================================================
-# Copyright © 2017 David Ganshorn. All rights reserved.
-# Created by David Ganshorn on 07/26/2017.
-#
-# Last Updated by David Ganshorn on 07/26/2017.
-#
-# ======================================================================================================================
 
 import os
-
 import tensorflow as tf
 
 from utils import dictionary as dict

@@ -1,10 +1,3 @@
-# ======================================================================================================================
-# Copyright © 2017 David Ganshorn. All rights reserved.
-# Created by David Ganshorn on 07/26/2017.
-#
-# Last Updated by David Ganshorn on 07/26/2017.
-#
-# ======================================================================================================================
 
 import datetime
 from utils import constants, dictionary as dict
