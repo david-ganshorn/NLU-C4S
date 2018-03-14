@@ -1,15 +1,3 @@
-# ======================================================================================================================
-# Copyright © 2017 David Ganshorn. All rights reserved.
-# Created by David Ganshorn on 08/04/2017.
-#
-# Last Updated by David Ganshorn on 08/04/2017.
-#
-# Comment:
-# Had to implement own function of dictionary, since tensorflow.contrib.learn
-# cuts tokens like '<s>', '</s>' and <UNK> into 's' and 'UNK'
-# reuse of dictionary implementation by Luheng He
-#
-# ======================================================================================================================
 
 from utils import constants
 

@@ -1,10 +1,3 @@
-# ======================================================================================================================
-# Copyright © 2017 David Ganshorn. All rights reserved.
-# Created by David Ganshorn on 08/22/2017.
-#
-# Last Updated by David Ganshorn on 08/22/2017.
-#
-# ======================================================================================================================
 
 import os
 import copy
@@ -20,7 +13,7 @@ from sklearn.model_selection import train_test_split as dev_split
 from tagger.model import SRLModel
 from tagger.data_utils import Progbar
 
-from utils import constants, printer
+from utils import constants
 
 
 def train_test_split(questions, config):
@@ -126,10 +119,6 @@ def kFoldCrossValidation(x, y, model, optimizer, embeddings, config):
                     start_time = time.time()
 
                     # Start Training for this combination
-                    printer.print_to_file("Combination {} out of {}:".format(current_step, total_steps))
-                    printer.print_to_file(
-                        "===========================================================================================================")
-
                     accuracy, f1_score = fit_and_score(x, y, embeddings, config)
 
                     # Stop timer
@@ -147,13 +136,6 @@ def kFoldCrossValidation(x, y, model, optimizer, embeddings, config):
                     setting_df = pd.DataFrame(setting,
                                               columns=["Model", "Optimizer", "Hidden", "Learning", "LR Decay",
                                                        "Dropout", "Accuracy", "F1", "Progress", "Duration"])
-
-                    printer.print_to_file(setting_df)
-                    printer.print_to_file("")
-                    printer.print_to_file(
-                        "-----------------------------------------------------------------------------------------------------------")
-                    printer.print_to_file("")
-                    printer.print_to_file("")
 
                     # Find the best configuration
                     if f1_score > best_f1:
@@ -309,6 +291,3 @@ def test_and_score(x, y, x_test, y_test, cv_results, embeddings, config):
                       columns=["Model", "Optimizer", "Hidden Size", "Learning Rate", "LR Decay", "Train Dropout", "Test Dropout",
                                "Dev Accuracy", "Dev F1-Score", "Test Accuracy", "Test F1-Score"])
 
-    printer.print_to_file("")
-    printer.print_to_file(df)
-    printer.print_to_file("")
