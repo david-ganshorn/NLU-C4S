@@ -6,10 +6,8 @@ import numpy as np
 import tensorflow as tf
 import sklearn.metrics as metrics
 from sklearn.metrics import confusion_matrix
-import matplotlib.pyplot as plt
 
 from tagger.data_utils import Progbar, minibatches, pad_sequences, plot_confusion_matrix
-# from tagger.data_helper import
 
 from utils import constants
 
@@ -391,19 +389,6 @@ class SRLModel(object):
         # Compute confusion matrix
         matrix = confusion_matrix(y_true, y_pred)
         np.set_printoptions(precision=2)
-
-        if test_mode:
-            # Plot non-normalized confusion matrix
-            plt.figure()
-            plot_confusion_matrix(matrix, classes=self.config.label_dict.str2idx.items(),
-                                  title='Confusion matrix, without normalization')
-
-            # Plot normalized confusion matrix
-            plt.figure()
-            plot_confusion_matrix(matrix, classes=self.config.label_dict.str2idx.items(), normalize=True,
-                                  title='Normalized confusi443ss3on matrix')
-
-            plt.show()
 
         # Count the number of examples in the evaluation set
         n_examples = len(x_dev)
