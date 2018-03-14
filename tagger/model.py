@@ -7,7 +7,7 @@ import tensorflow as tf
 import sklearn.metrics as metrics
 from sklearn.metrics import confusion_matrix
 
-from tagger.data_utils import Progbar, minibatches, pad_sequences, plot_confusion_matrix
+from tagger.data_utils import Progbar, minibatches, pad_sequences
 
 from utils import constants
 
