@@ -1,0 +1,1051 @@
+
+1	|	How is our financial performance versus analyst estimates	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	cmp	cmp
+2	|	Which market units generate the most cloud revenue	|	FIN	|	Lookup	|	Location	|	O	res	res	O	O	argm	B_where	mea
+3	|	Which market units have had the highest cloud revenue growth rates	|	FIN	|	Calculate	|	Location	|	O	res	res	O	O	O	argm	B_where	mea	mea	mea
+4	|	Which region generates the most cloud revenue	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	mea
+5	|	Which countries generated the most service revenue	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	mea
+6	|	Which country has had the highest cloud revenue growth rates in the past half year	|	FIN	|	Calculate	|	Location	|	O	res	O	O	O	argm	B_where	mea	mea	mea	O	O	B_where	I_where	I_where
+7	|	Which market unit has had the least cloud revenue growth rates in the past half year	|	FIN	|	Calculate	|	Location	|	O	res	res	O	O	O	argm	B_where	mea	mea	mea	O	O	B_where	I_where	I_where
+8	|	Which organization has had the highest revenue growth rates in the last quarter	|	FIN	|	Calculate	|	Location	|	O	res	O	O	O	argm	mea	mea	mea	O	O	B_where	I_where
+9	|	Which location generates the most cloud revenue	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	mea
+10	|	Which location has generated the most cloud revenue last quarter	|	FIN	|	Lookup	|	Location	|	O	res	O	O	O	argm	B_where	mea	B_where	I_where
+11	|	For which locations is the cloud revenue greater than ten million	|	FIN	|	Lookup	|	Location	|	O	O	res	O	O	B_where	mea	oper	O	cmp	cmp
+12	|	Show all countries that have profits bigger than 1 million	|	FIN	|	Comparison	|	Location	|	O	O	res	O	O	mea	oper	O	cmp	cmp
+13	|	Which countries have profits bigger 1 million	|	FIN	|	Comparison	|	Location	|	O	res	O	mea	oper	cmp	cmp
+14	|	Which are the top market units regarding cloud revenue	|	FIN	|	Lookup	|	Location	|	O	O	O	argm	res	res	O	B_where	mea
+15	|	How many market units had more than 10 percent software revenue growth rates	|	FIN	|	Calculate	|	Numeric	|	O	oper	grpby	grpby	O	oper	O	cmp	cmp	B_where	mea	mea	mea
+16	|	Which market units had more than 5 percent software revenue growth rates	|	FIN	|	Calculate	|	Location	|	O	res	res	O	oper	O	cmp	cmp	B_where	mea	mea	mea
+17	|	The on-premise revenue was the highest for which region last quarter	|	FIN	|	Lookup	|	Location	|	O	B_where	mea	O	O	argm	O	O	res	B_where	I_where
+18	|	What is the software revenue growth in the last two quarters	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	O	B_where	I_where	I_where
+19	|	What is the software revenue growth during the last two quarters	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	O	B_where	I_where	I_where
+20	|	What is the on-premise revenue growth for the past two quarters	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	O	B_where	I_where	I_where
+21	|	Show us the on-premise revenue growth for the last two quarters	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	O	B_where	I_where	I_where
+22	|	Show us the development of our on-premise revenue growth throughout the last three quarters	|	FIN	|	Calculate	|	Numeric	|	O	O	O	O	O	O	B_where	mea	mea	O	O	B_where	I_where	I_where
+23	|	What is the margin for product Objects Cloud	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	I_where
+24	|	What is the margin for our on-premise products	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	O
+25	|	What was the revenue for the last rolling four quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	I_where	I_where	I_where
+26	|	What was the margin for the last half year in Germany	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	I_where	I_where	O	B_where
+27	|	What was the margin for the last half year for Objects Cloud	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	I_where	I_where	O	B_where	I_where
+28	|	What was the margin for the last half year for our cloud software	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	I_where	I_where	O	O	B_where	O
+29	|	How was the growth rate in the last four quarters	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	O	B_where	I_where	I_where
+30	|	What is the revenue compared to Oracle	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	cmp
+31	|	Tell me the key driver of the on-premise revenue	|	FIN	|	Lookup	|	Product	|	O	O	O	argm	O	O	O	B_where	mea
+32	|	Who are the key market units of our cloud revenue	|	FIN	|	Lookup	|	Location	|	O	O	O	argm	res	res	O	O	B_where	mea
+33	|	Tell me what does the cost structure in the United States look like	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	O	mea	mea	O	O	B_where	I_where	O	O
+34	|	Tell me what does the cost structure in the United States look like compared to Germany	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	mea	mea	O	O	cmp	cmp	O	O	O	O	cmp
+35	|	What are our travel and entertainment expenses in Germany	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	I_where	I_where	mea	O	B_where
+36	|	Show us all travel and entertainment expenses for Germany	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	I_where	I_where	mea	O	B_where
+37	|	How much travel and entertainment expenses does Germany have	|	FIN	|	Lookup	|	Numeric	|	O	O	B_where	I_where	I_where	mea	O	B_where	O
+38	|	What is the key driver of the license revenue	|	FIN	|	Lookup	|	Product	|	O	O	O	argm	O	O	O	B_where	mea
+39	|	What is the year over year growth rate for product HANA per region	|	FIN	|	Calculate	|	Numeric	|	O	O	O	grpby	grpby	grpby	mea	mea	O	O	B_where	O	grpby
+40	|	What is the software license revenue for the last quarter	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	O	mea	O	O	B_where	I_where
+41	|	Show us the quarterly software revenue for the last year	|	FIN	|	Lookup	|	Numeric	|	O	O	O	grpby	B_where	mea	O	O	B_where	I_where
+42	|	What is the revenue for our services offerings	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	O
+43	|	What is the total profit for Germany in the first two quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	B_where	O	O	B_where	I_where	I_where
+44	|	Show the cloud profit for North America in this year	|	FIN	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	B_where	I_where	O	B_where	I_where
+45	|	Which region has the highest profits	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	mea
+46	|	What is our profit for the last four years	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	I_where	I_where
+47	|	What is the trend of the profit in APJ during the last two quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea	O	B_where	O	O	B_where	I_where	I_where
+48	|	Show the profit trend for APJ in the last four years	|	FIN	|	Lookup	|	Numeric	|	O	O	mea	O	O	B_where	O	O	B_where	I_where	I_where
+49	|	How has our profit evolved over the last four years	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	O	B_where	I_where	I_where
+50	|	What are the 5 biggest countries based on revenue	|	FIN	|	Lookup	|	Location	|	O	O	O	argm	argm	res	O	O	mea
+51	|	Show the three countries with the highest growth rates	|	FIN	|	Calculate	|	Location	|	O	O	argm	res	O	O	argm	mea	mea
+52	|	For which country is the cloud revenue growth rates the highest	|	FIN	|	Calculate	|	Location	|	O	O	res	O	O	B_where	mea	mea	mea	O	argm
+53	|	What is our total revenue	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	mea
+54	|	What is the total revenue for EMEA	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	B_where
+55	|	What is the cloud share of our total revenue	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	oper	O	O	O	mea
+56	|	Show all countries that have decreasing revenue digits	|	FIN	|	Calculate	|	Location	|	O	O	res	O	O	oper	mea	O
+57	|	Compare the gross margin for our cloud and software products	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	cmp	O	cmp	O
+58	|	What is the gross profit for our cloud products between France and Italy	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	mea	O	O	B_where	O	O	cmp	O	cmp
+59	|	Show us the gross margin for all categories	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	grpby
+60	|	What are this years marketing costs per market unit	|	FIN	|	Lookup	|	Numeric	|	O	O	B_where	I_where	B_where	mea	O	grpby	grpby
+61	|	What are the gross margin differences between Germany and Austria	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	mea	O	O	cmp	O	cmp
+62	|	Calculate the gross margin differences of cloud and software products	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	cmp	O	cmp	O
+63	|	Calculate the gross profit for each product	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	grpby
+64	|	Which country has the highest cloud stake of our revenue	|	FIN	|	Calculate	|	Location	|	O	res	O	O	argm	B_where	oper	O	O	mea
+65	|	What was the cloud stake of our total revenue in 2016	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	oper	O	O	O	mea	O	B_where
+66	|	What was our gross margin for each product last quarter	|	FIN	|	Lookup	|	Product	|	O	O	O	O	mea	O	O	grpby	B_where	I_where
+67	|	Display the cloud gross profit per region in the last two quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	B_where	O	mea	O	grpby	O	O	B_where	I_where	I_where
+68	|	How high was the revenue stake of EMEA in 2016	|	FIN	|	Calculate	|	Numeric	|	O	O	O	O	mea	oper	O	B_where	O	B_where
+69	|	Show the stake of last quarters revenue	|	FIN	|	Calculate	|	Numeric	|	O	O	oper	O	B_where	I_where	mea
+70	|	Show the percentage of each market unit for our total cloud revenue	|	FIN	|	Calculate	|	Numeric	|	O	O	oper	O	O	grpby	grpby	O	O	O	B_where	mea
+71	|	Compare the gross profit for our software and cloud products in America	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	cmp	O	cmp	O	O	B_where
+72	|	What is the difference between cloud gross margin and software	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	cmp	O	mea	O	cmp
+73	|	What are the key influencer for our operating profit	|	FIN	|	Lookup	|	Location	|	O	O	O	argm	O	O	O	mea	mea
+74	|	Show total revenue for DACH in the last quarter	|	FIN	|	Lookup	|	Numeric	|	O	O	mea	O	B_where	O	O	B_where	I_where
+75	|	Which region has had the lowest cloud growth rates	|	FIN	|	Calculate	|	Location	|	O	res	O	O	O	argm	B_where	mea	mea
+76	|	Which region has had the lowest cloud growth rates in the last quarter	|	FIN	|	Calculate	|	Location	|	O	res	O	O	O	argm	B_where	mea	mea	O	O	B_where	I_where
+77	|	Which countries have had earned the least revenue across the company in Q1	|	FIN	|	Lookup	|	Location	|	O	res	O	O	O	O	argm	mea	O	O	O	O	B_where
+78	|	Which market unit has the worst year over year growth rates	|	FIN	|	Calculate	|	Location	|	O	res	res	O	O	argm	grpby	grpby	grpby	mea	mea
+79	|	Show the bottom 3 market units in relation to on-premise revenue	|	FIN	|	Lookup	|	Location	|	O	O	argm	argm	res	res	O	O	O	B_where	mea
+80	|	Which countries have the lowest impact on our cloud revenue	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	O	O	O	B_where	mea
+81	|	Which region generates the most on-premise revenue	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	mea
+82	|	What is the revenue over the last four quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	I_where	I_where
+83	|	How does the margin development for HANA looks like in the last four quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	O	O	O	O	B_where	I_where	I_where
+84	|	What is the revenue in EMEA over the last four quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	O	O	B_where	I_where	I_where
+85	|	Which region generates the most cloud traffic	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	O
+86	|	What is the cloud revenue compared to the same quarter of last year	|	FIN	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	O	O	cmp	cmp	O	cmp	cmp
+87	|	What is the total on-premise revenue in Indonesia compared to last year	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	B_where	mea	O	B_where	O	O	cmp	cmp
+88	|	Which product has generated the highest cloud revenues	|	FIN	|	Lookup	|	Product	|	O	res	O	O	O	argm	B_where	mea
+89	|	Show all products with higher revenue figures than one billion dollars	|	FIN	|	Lookup	|	Product	|	O	O	res	O	oper	mea	O	O	cmp	cmp	O
+90	|	What is the margin for our cloud products in Great Britain	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	O	O	B_where	I_where
+91	|	What is the cloud margin for Germany compared to China	|	FIN	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	cmp	O	O	cmp
+92	|	Compared to Germany which countries have higher cloud growth rates	|	FIN	|	Comparison	|	Location	|	O	O	cmp	O	res	O	oper	B_where	mea	mea
+93	|	In comparison to APJ which region generates more service revenues	|	FIN	|	Comparison	|	Location	|	O	O	O	cmp	O	res	O	oper	B_where	mea
+94	|	Show all regions that have higher revenue digits than Americas	|	FIN	|	Comparison	|	Location	|	O	O	res	O	O	oper	mea	O	O	cmp
+95	|	Show all countries with double digit cloud growth rates	|	FIN	|	Calculate	|	Location	|	O	O	res	O	oper	oper	B_where	mea	mea
+96	|	Which countries do not have double digit revenue growth rates	|	FIN	|	Calculate	|	Location	|	O	res	O	oper	O	oper	oper	mea	mea	mea
+97	|	Which products have achieved double digit growth rates in the last year	|	FIN	|	Calculate	|	Product	|	O	res	O	O	oper	oper	mea	mea	O	O	B_where	I_where
+98	|	Which countries have rising revenue growth rates	|	FIN	|	Calculate	|	Location	|	O	res	O	oper	mea	mea	mea
+99	|	In which countries are the revenue growth rates increasing	|	FIN	|	Calculate	|	Location	|	O	O	res	O	O	mea	mea	mea	oper
+100	|	For which countries are the cloud revenue figures increasing	|	FIN	|	Calculate	|	Location	|	O	O	res	O	O	B_where	mea	O	oper
+101	|	In which countries are the cloud revenue figures decreasing	|	FIN	|	Lookup	|	Location	|	O	O	res	O	O	B_where	mea	O	oper
+102	|	Which country has the highest cloud revenue growth rates	|	FIN	|	Calculate	|	Location	|	O	res	O	O	argm	B_where	mea	mea	mea
+103	|	What is the total cloud revenue	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	B_where	mea
+104	|	Show the total cloud revenue across the company	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	O	O
+105	|	Show the total cloud revenue in Poland	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where
+106	|	Which region has the highest cloud revenue growth rates	|	FIN	|	Calculate	|	Location	|	O	res	O	O	argm	B_where	mea	mea	mea
+107	|	Show the region with the lowest growth rates for cloud products	|	FIN	|	Calculate	|	Location	|	O	O	res	O	O	argm	mea	mea	O	B_where	O
+108	|	How many market units have double digit growth rates	|	FIN	|	Calculate	|	Numeric	|	O	oper	grpby	grpby	O	oper	oper	mea	mea
+109	|	Which regions have higher growth rates than 10 percent	|	FIN	|	Calculate	|	Location	|	O	res	O	oper	mea	mea	O	cmp	cmp
+110	|	Tell us the number of regions that have a lower cloud growth rate than 10 percent	|	FIN	|	Calculate	|	Numeric	|	O	O	O	oper	O	grpby	O	O	O	oper	B_where	mea	mea	O	cmp	cmp
+111	|	What is the total growth rate across the company	|	FIN	|	Calculate	|	Numeric	|	O	O	O	O	mea	mea	O	O	O
+112	|	What is the growth rate for our cloud services	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	O	B_where	O
+113	|	Tell us the growth rate for all cloud products	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	O	B_where	O
+114	|	Show us the total growth rate across the whole company	|	FIN	|	Calculate	|	Numeric	|	O	O	O	O	mea	mea	O	O	O	O
+115	|	Total growth rate across SAP	|	FIN	|	Calculate	|	Numeric	|	O	mea	mea	O	O
+116	|	What is the total growth rate across SAP	|	FIN	|	Calculate	|	Numeric	|	O	O	O	O	mea	mea	O	O
+117	|	What is the total growth rate for cloud services in North America	|	FIN	|	Calculate	|	Numeric	|	O	O	O	O	mea	mea	O	B_where	O	O	B_where	I_where
+118	|	How many quarters have had higher cloud growth rates than 10 percent	|	FIN	|	Calculate	|	Numeric	|	O	oper	grpby	O	O	oper	B_where	mea	mea	O	cmp	cmp
+119	|	How many quarters have had double digit growth rates	|	FIN	|	Calculate	|	Numeric	|	O	oper	grpby	O	O	oper	oper	mea	mea
+120	|	What are our on-premise costs across the company	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	O	O
+121	|	How high are our cloud service costs in China	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	B_where	O	mea	O	B_where
+122	|	What is our cloud profit in Saudi Arabia	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where	I_where
+123	|	Which country has the highest profit rates	|	FIN	|	Calculate	|	Location	|	O	res	O	O	argm	mea	mea
+124	|	What is the country with the highest cloud profitability	|	FIN	|	Lookup	|	Location	|	O	O	O	res	O	O	argm	B_where	mea
+125	|	How high are our costs for marketing	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	B_where
+126	|	What are our travel and entertainment costs in Japan	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	I_where	I_where	mea	O	B_where
+127	|	Which country has the highest travel and entertainment costs	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	I_where	I_where	mea
+128	|	Which countries generate the most costs	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	mea
+129	|	What are the highest costs across SAP	|	FIN	|	Lookup	|	Numeric	|	O	O	O	argm	mea	O	O
+130	|	What are the costs for marketing in Germany	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	O	B_where
+131	|	What is our marketing spend in Croatia	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where
+132	|	What is the spend for research and development	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	I_where	I_where
+133	|	What is the spend for travel and entertainment in Denmark	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	I_where	I_where	O	B_where
+134	|	What is our total marketing spend	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	B_where	mea
+135	|	What is our marketing spend in Latin America	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where	I_where
+136	|	Tell us the total marketing spend for China	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	B_where	mea	O	B_where
+137	|	What is our annually research and development spend	|	FIN	|	Lookup	|	Numeric	|	O	O	O	grpby	B_where	I_where	I_where	mea
+138	|	What are our cloud hardware costs	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	O	mea
+139	|	What are our monthly hardware costs to run the cloud software	|	FIN	|	Lookup	|	Numeric	|	O	O	O	grpby	O	mea	O	O	O	B_where	O
+140	|	What does our financial performance look like in the last 4 quarters	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	O	O	O	B_where	I_where	I_where
+141	|	Show us our total revenue compared to the total costs during the last 4 quarters	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	cmp	O	O	O	O	cmp	O	O	B_where	I_where	I_where
+142	|	What is the profit of our cloud services compared to on-premise services	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	cmp	O	O	O	cmp	O
+143	|	How high are our operating expenses	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	mea	mea
+144	|	What are our operating expenses in Germany	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where
+145	|	What are our operating expenses in France compared to Spain	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	cmp	O	O	cmp
+146	|	What is our marketing spend per region	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	grpby
+147	|	Which locations have the highest marketing spend in North America	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	mea	O	B_where	I_where
+148	|	Show the revenue per region	|	FIN	|	Lookup	|	Numeric	|	O	O	mea	O	grpby
+149	|	What is the total revenue per region	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	grpby
+150	|	What does the total spend look like per region	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	O	grpby
+151	|	What is the gross revenue in India	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where
+152	|	What is our year over year growth rate over the past 3 years	|	FIN	|	Calculate	|	Numeric	|	O	O	O	grpby	grpby	grpby	mea	mea	O	O	B_where	I_where	I_where
+153	|	What is the revenue stake per region	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	oper	O	grpby
+154	|	What is the quarterly trend of our on-premise revenue	|	FIN	|	Lookup	|	Numeric	|	O	O	O	grpby	O	O	O	B_where	mea
+155	|	What is the gross revenue for Europe	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where
+156	|	Which region has the strongest cloud growth rates	|	FIN	|	Calculate	|	Location	|	O	res	O	O	argm	B_where	mea	mea
+157	|	Show the total cloud growth rates per region	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	grpby
+158	|	What is the total growth rate for cloud products split by region	|	FIN	|	Calculate	|	Numeric	|	O	O	O	O	mea	mea	O	B_where	O	O	O	grpby
+159	|	Show the profitability across the cloud sector	|	FIN	|	Lookup	|	Numeric	|	O	O	mea	O	O	B_where	O
+160	|	How profitable is the on-premise business	|	FIN	|	Lookup	|	Numeric	|	O	mea	O	O	B_where	O
+161	|	Which market units has the highest cloud profitability	|	FIN	|	Lookup	|	Location	|	O	res	res	O	O	argm	B_where	mea
+162	|	Which region has the lowest cloud profitability	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	mea
+163	|	Show the two countries with the highest profit margin	|	FIN	|	Lookup	|	Location	|	O	O	argm	res	O	O	argm	mea	mea
+164	|	What are the cloud margins for China and Japan	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where	O	B_where
+165	|	Show the gross revenue for Austria and Switzerland	|	FIN	|	Lookup	|	Numeric	|	O	O	mea	mea	O	B_where	O	B_where
+166	|	What is the total cloud revenue for Spain and Italy	|	FIN	|	Lookup	|	Numeric	|	O	O	O	O	B_where	mea	O	B_where	O	B_where
+167	|	Tell the total marketing spend for all countries belonging to South America	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	O	grpby	O	O	B_where	I_where
+168	|	What is the on-premise revenue for countries in APJ	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	grpby	O	B_where
+169	|	Which market units generate more cloud revenue than the US	|	FIN	|	Comparison	|	Location	|	O	res	res	O	oper	B_where	mea	O	O	cmp
+170	|	Compared to the US which market units generate higher cloud growth rates	|	FIN	|	Comparison	|	Location	|	O	O	O	cmp	O	res	res	O	oper	B_where	mea	mea
+171	|	What are the revenue numbers between cloud and on-premise	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	cmp	O	cmp
+172	|	What is the difference in revenue between on-premise and cloud	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	mea	O	cmp	O	cmp
+173	|	What is the on-premise revenue compared to cloud	|	FIN	|	Comparison	|	Numeric	|	O	O	O	cmp	mea	O	O	cmp
+174	|	What is the cloud revenue compared to on-premise revenue	|	FIN	|	Comparison	|	Numeric	|	O	O	O	cmp	mea	O	O	cmp	mea
+175	|	Which country runs the most profitable cloud business	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	mea	B_where	O
+176	|	Which country has the highest profitability regarding cloud services	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	mea	O	B_where	O
+177	|	Which are the 3 biggest locations based on revenue	|	FIN	|	Lookup	|	Location	|	O	O	O	argm	argm	res	O	O	mea
+178	|	What is the difference in revenue between Germany and Spain	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	mea	O	cmp	O	cmp
+179	|	Show the differences between India and China for revenues	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	cmp	O	cmp	O	mea
+180	|	What were our revenue growth rates for 2016	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	B_where
+181	|	What are our revenue growth rates per market unit	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	grpby	grpby
+182	|	What were our revenue growth rates for last year	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	B_where	I_where
+183	|	What are the revenue growth rates per location	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	grpby
+184	|	What were the revenue growth rates per location in 2016	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	grpby	O	B_where
+185	|	What are our revenue growth rates for this year	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	B_where	I_where
+186	|	Which region had the best performance based on revenue in the last quarter	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	O	O	O	mea	O	O	B_where	I_where
+187	|	Which region was performing the best last year regarding their profit	|	FIN	|	Lookup	|	Location	|	O	res	O	O	O	argm	B_where	I_where	O	O	mea
+188	|	What was the revenue per product in the last quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	grpby	O	O	B_where	I_where
+189	|	Show the top 3 products for each region based on revenue	|	FIN	|	Lookup	|	Product	|	O	O	argm	argm	res	O	O	grpby	O	O	mea
+190	|	What are the gains in cloud revenue between this year and last year	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	B_where	mea	O	cmp	cmp	O	cmp	cmp
+191	|	What are the cloud growth rates per quarter	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	grpby
+192	|	What are the revenue growth rates in EMEA per quarter in the last year	|	FIN	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	B_where	O	grpby	O	O	B_where	I_where
+193	|	What was the revenue per quarter in 2017	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	grpby	O	B_where
+194	|	What is the share of the cloud revenue per region	|	FIN	|	Calculate	|	Numeric	|	O	O	O	oper	O	O	B_where	mea	O	grpby
+195	|	Which region has the highest share of cloud revenue	|	FIN	|	Calculate	|	Location	|	O	res	O	O	argm	oper	O	B_where	mea
+196	|	Which region has the lowest share of our cloud revenue	|	FIN	|	Calculate	|	Location	|	O	res	O	O	argm	oper	O	O	B_where	mea
+197	|	Which region has the biggest cloud margins	|	FIN	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	mea
+198	|	What are the cloud margins per market unit	|	FIN	|	Lookup	|	Location	|	O	O	O	B_where	mea	O	grpby	grpby
+199	|	Show all countries that have a higher service revenue than 5 million	|	FIN	|	Lookup	|	Location	|	O	O	res	O	O	O	oper	B_where	mea	O	cmp	cmp
+200	|	Show the cloud revenue per country in this year	|	FIN	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	grpby	O	B_where	I_where
+201	|	What was the cloud profit in Germany last quarter	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where	B_where	I_where
+202	|	Show our revenue distribution per region	|	FIN	|	Lookup	|	Numeric	|	O	O	mea	O	O	grpby
+203	|	In the past year what was the cloud revenue in South Africa	|	FIN	|	Lookup	|	Numeric	|	O	O	B_where	I_where	O	O	O	B_where	mea	O	B_where	I_where
+204	|	For each quarter of the past 4 quarters what was the cloud revenue	|	FIN	|	Lookup	|	Numeric	|	O	O	grpby	O	O	B_where	I_where	I_where	O	O	O	B_where	mea
+205	|	What were the cloud growth rates for the last four quarters	|	FIN	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	O	B_where	I_where	I_where
+206	|	In which country were the on-premise growth rates stagnating	|	FIN	|	Calculate	|	Location	|	O	O	res	O	O	B_where	mea	mea	oper
+207	|	Which region has stagnating cloud revenue growth rates	|	FIN	|	Calculate	|	Location	|	O	res	O	oper	B_where	mea	mea	mea
+208	|	What are the revenue figures for APJ and EMEA in the last month	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	cmp	O	cmp	O	O	B_where	I_where
+209	|	Compare the revenue figures for Germany and India in this year	|	FIN	|	Comparison	|	Numeric	|	O	O	mea	O	O	cmp	O	cmp	O	B_where	I_where
+210	|	What is our revenue in Denmark this year	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	B_where	I_where
+211	|	In this year how many countries have higher on-premise growth rates than 5 percent	|	FIN	|	Calculate	|	Numeric	|	O	B_where	I_where	O	oper	grpby	O	oper	B_where	mea	mea	O	cmp	cmp
+212	|	In the last year which country has had the most cloud revenue	|	FIN	|	Lookup	|	Location	|	O	O	B_where	I_where	O	res	O	O	O	argm	B_where	mea
+213	|	The cloud revenue growth rates are the biggest for which organization	|	FIN	|	Calculate	|	Location	|	O	B_where	mea	mea	mea	O	O	argm	O	O	res
+214	|	Show the top 3 organization with the best cloud margins	|	FIN	|	Lookup	|	Location	|	O	O	argm	argm	res	O	O	O	B_where	mea
+215	|	In which organization were the revenue numbers the biggest in the last 2 quarters	|	FIN	|	Lookup	|	Location	|	O	O	res	O	O	mea	O	O	argm	O	O	B_where	I_where	I_where
+216	|	How many organizations are having positive profits	|	FIN	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	oper	mea
+217	|	For each quarter in the last year what was our cloud revenue	|	FIN	|	Lookup	|	Numeric	|	O	O	grpby	O	O	B_where	I_where	O	O	O	B_where	mea
+218	|	What was our cloud revenue for each quarter in the last year	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	O	grpby	O	O	B_where	I_where
+219	|	What are the revenue figures for every quarter in the last 2 years	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	O	grpby	O	O	B_where	I_where	I_where
+220	|	Show our revenue figures for each quarter in 2016	|	FIN	|	Lookup	|	Numeric	|	O	O	mea	O	O	O	grpby	O	B_where
+221	|	Show last years revenue figures	|	FIN	|	Lookup	|	Numeric	|	O	B_where	I_where	mea	O
+222	|	What are last years revenue numbers in EMEA	|	FIN	|	Lookup	|	Numeric	|	O	O	B_where	I_where	mea	O	O	B_where
+223	|	In 2016 what was our S4 revenue per market unit	|	FIN	|	Lookup	|	Numeric	|	O	B_where	O	O	O	B_where	mea	O	grpby	grpby
+224	|	What was the revenue for HANA in each quarter of the last 4 quarters	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	O	O	grpby	O	O	B_where	I_where	I_where
+225	|	Which country has generated the biggest profits for S4 in Q1 2017	|	FIN	|	Lookup	|	Location	|	O	res	O	O	O	argm	mea	O	B_where	O	B_where	I_where
+226	|	What was the revenue for EMEA in 2015 compared to 2016	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	O	B_where	O	cmp	O	O	cmp
+227	|	What was the revenue for 2016 between EMEA and APJ	|	FIN	|	Comparison	|	Numeric	|	O	O	O	mea	O	B_where	O	cmp	O	cmp
+228	|	What was the cloud profit for EMEA last year	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where	B_where	I_where
+229	|	What is the difference in software profit between America and Europe	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	B_where	mea	O	cmp	O	cmp
+230	|	Which market unit had the most software revenue in 2014	|	FIN	|	Lookup	|	Location	|	O	res	res	O	O	argm	B_where	mea	O	B_where
+231	|	Which region has generated the most service revenue for the combined last 4 quarters	|	FIN	|	Lookup	|	Location	|	O	res	O	O	O	argm	B_where	mea	O	O	O	B_where	I_where	I_where
+232	|	What were the software profit growth rates between this year and last year	|	FIN	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	mea	mea	O	cmp	cmp	O	cmp	cmp
+233	|	What was the revenue for SAP HANA in Q2 2017	|	FIN	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	I_where	O	B_where	I_where
+234	|	What was the software profit for SAP HANA between this quarter and last quarter	|	FIN	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	B_where	I_where	O	cmp	cmp	O	cmp	cmp
+235	|	What were last years software revenue figures between EMEA and APJ	|	FIN	|	Comparison	|	Numeric	|	O	O	B_where	I_where	B_where	mea	O	O	cmp	O	cmp
+236	|	What was the on-premise revenue per product last year	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	grpby	B_where	I_where
+237	|	Show us the on-premise revenue compared to the cloud	|	FIN	|	Comparison	|	Numeric	|	O	O	O	cmp	mea	O	O	O	cmp
+238	|	What is the difference between software and cloud revenue in 2017	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	cmp	O	cmp	mea	O	B_where
+239	|	Which market unit has caused the highest cloud costs in the last quarter	|	FIN	|	Lookup	|	Location	|	O	res	res	O	O	O	argm	B_where	mea	O	O	B_where	I_where
+240	|	Tell us the top 3 organizations with the biggest software costs	|	FIN	|	Lookup	|	Location	|	O	O	O	argm	argm	B_where	O	O	argm	B_where	mea
+241	|	What is the cloud profit for each organization in America	|	FIN	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	O	grpby	O	B_where
+242	|	For each organization show the software revenue growth rates for the past 2 years	|	FIN	|	Calculate	|	Numeric	|	O	O	grpby	O	O	B_where	mea	mea	mea	O	O	B_where	I_where	I_where
+243	|	What is the market unit with the biggest software costs	|	FIN	|	Lookup	|	Location	|	O	O	O	res	res	O	O	argm	B_where	mea
+244	|	Compare the costs for EMEA and APJ	|	FIN	|	Comparison	|	Numeric	|	O	O	mea	O	cmp	O	cmp
+245	|	Compare the revenue for SAP HANA and SAP ERP	|	FIN	|	Comparison	|	Numeric	|	O	O	mea	O	cmp	cmp	O	cmp	cmp
+246	|	What is the difference in cloud and software profit for last year	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	cmp	O	cmp	mea	O	B_where	I_where
+247	|	Which product has generated the biggest revenue last quarter	|	FIN	|	Lookup	|	Product	|	O	res	O	O	O	argm	mea	B_where	I_where
+248	|	Show the cloud revenue per market unit in 2014	|	FIN	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	grpby	grpby	O	B_where
+249	|	Show the cloud revenue comparison of SAP USA and SAP Canada	|	FIN	|	Comparison	|	Numeric	|	O	O	B_where	mea	O	O	cmp	cmp	O	cmp	cmp
+250	|	What is the comparison between cloud revenue and costs	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	B_where	cmp	O	cmp
+251	|	Show all regions with double digits cloud revenue growth rates in 2016	|	FIN	|	Calculate	|	Location	|	O	O	res	O	oper	oper	B_where	mea	mea	mea	O	B_where
+252	|	Tell us the organizations that had double digit profit growth rates last year	|	FIN	|	Calculate	|	Location	|	O	O	O	res	O	O	oper	oper	mea	mea	mea	B_where	I_where
+253	|	Which region has the biggest share of our cloud revenue	|	FIN	|	Calculate	|	Location	|	O	res	O	O	argm	oper	O	O	B_where	mea
+254	|	Show us the product with the biggest share of our software revenue	|	FIN	|	Calculate	|	Product	|	O	O	O	res	O	O	argm	oper	O	O	B_where	mea
+255	|	What are the marketing costs between EMEA and Americas this year	|	FIN	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	cmp	O	cmp	B_where	I_where
+256	|	Compare the cloud revenue for Q3 2016 and Q3 2017	|	FIN	|	Comparison	|	Numeric	|	O	O	B_where	mea	O	cmp	cmp	O	cmp	cmp
+257	|	What are the cloud margins for this quarter and Q4 2016	|	FIN	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	cmp	cmp	O	cmp	cmp
+258	|	Calculate the revenue growth rate differences between Germany and France	|	FIN	|	Comparison	|	Numeric	|	O	O	mea	mea	mea	O	O	cmp	O	cmp
+259	|	Show the gross profit for each country	|	FIN	|	Lookup	|	Numeric	|	O	O	mea	mea	O	O	grpby
+260	|	Tell us the differences between cloud revenue and costs	|	FIN	|	Comparison	|	Numeric	|	O	O	O	O	O	B_where	cmp	O	cmp
+261	|	Which are the five biggest deals in our pipeline in Q1	|	SALE	|	Lookup	|	Sale	|	O	O	O	argm	argm	res	O	O	O	O	B_where
+262	|	Which were the top three deals in the first quarter	|	SALE	|	Lookup	|	Sale	|	O	O	O	argm	argm	res	O	O	B_where	I_where
+263	|	Which deals are in the pipeline for company Facebook	|	SALE	|	Lookup	|	Sale	|	O	res	O	O	O	O	O	O	B_where
+264	|	Which deals are in the pipeline in Canada	|	SALE	|	Lookup	|	Sale	|	O	res	O	O	O	O	O	B_where
+265	|	Which deals in the pipeline are higher than one million dollar	|	SALE	|	Lookup	|	Sale	|	O	res	O	O	O	O	oper	O	cmp	cmp	O
+266	|	In which countries are our sales declining	|	SALE	|	Calculate	|	Location	|	O	O	res	O	O	B_where	oper
+267	|	What is the sales number for product S4 in this month	|	SALE	|	Lookup	|	Numeric	|	O	O	O	B_where	oper	O	O	B_where	O	B_where	I_where
+268	|	Who is the top salesperson for this quarter	|	SALE	|	Lookup	|	Person	|	O	O	O	argm	res	O	B_where	I_where
+269	|	Who was the salesperson with the highest revenue last month	|	SALE	|	Lookup	|	Person	|	O	O	O	res	O	O	argm	mea	B_where	I_where
+270	|	Which salesperson has the most closed deals	|	SALE	|	Lookup	|	Person	|	O	res	O	O	argm	B_where	O
+271	|	Who was the bottom salesperson last quarter	|	SALE	|	Lookup	|	Person	|	O	O	O	argm	res	B_where	I_where
+272	|	Which were the bottom five salespersons last quarter	|	SALE	|	Lookup	|	Person	|	O	O	O	argm	argm	res	B_where	I_where
+273	|	Who were the top performing salesmen last year	|	SALE	|	Lookup	|	Person	|	O	O	O	argm	O	res	B_where	I_where
+274	|	What is the sales forecast for China	|	SALE	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	B_where
+275	|	What does the sales forecast for EMEA look like	|	SALE	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	B_where	O	O
+276	|	Which employee has generated the biggest revenue	|	SALE	|	Lookup	|	Person	|	O	res	O	O	O	argm	mea
+277	|	What are the sale numbers for Michael Scott	|	SALE	|	Lookup	|	Numeric	|	O	O	O	B_where	oper	O	B_where	I_where
+278	|	Which employees have over fulfilled their quotas	|	SALE	|	Lookup	|	Person	|	O	res	O	oper	oper	O	cmp
+279	|	How many employees have over achieved their sales quota	|	SALE	|	Lookup	|	Numeric	|	O	oper	O	O	oper	oper	O	cmp	cmp
+280	|	Which salesmen have over achieved their goal	|	SALE	|	Lookup	|	Person	|	O	res	O	oper	oper	O	cmp
+281	|	What is the percentage of salesmen that did not reach their sales goal	|	SALE	|	Calculate	|	Numeric	|	O	O	O	oper	O	O	O	O	O	O	O	O	O
+282	|	What are the sale numbers for APJ	|	SALE	|	Lookup	|	Numeric	|	O	O	O	B_where	oper	O	B_where
+283	|	Show sale numbers in Brazil	|	SALE	|	Lookup	|	Numeric	|	O	B_where	oper	O	B_where
+284	|	Show the sale numbers for Brazil	|	SALE	|	Lookup	|	Numeric	|	O	O	B_where	oper	O	B_where
+285	|	What is the current quote to close ratio	|	SALE	|	Calculate	|	Numeric	|	O	O	O	O	mea	mea	mea	mea
+286	|	What is the sales target for this year	|	SALE	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where	I_where
+287	|	How many opportunities are currently in the pipeline	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O	O
+288	|	Show us the sale bookings for the last quarter	|	SALE	|	Lookup	|	Sale	|	O	O	O	B_where	I_where	O	O	B_where	I_where
+289	|	What was the average profit margin for sales in the last two quarters	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	mea	mea	O	B_where	O	O	B_where	I_where	I_where
+290	|	What was the biggest deal in the last month	|	SALE	|	Lookup	|	Sale	|	O	O	O	argm	res	O	O	B_where	I_where
+291	|	How many cloud customers do we have in France	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	grpby	O	O	O	O	B_where
+292	|	Show us the number of customers for S4	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	B_where
+293	|	Which companies consider to buy a Boardroom license in the US	|	SALE	|	Lookup	|	Company	|	O	res	O	O	B_where	O	B_where	O	O	O	B_where
+294	|	Which companies want to buy a Boardroom license in the US	|	SALE	|	Lookup	|	Company	|	O	res	O	O	B_where	O	B_where	O	O	O	B_where
+295	|	Which company thinks about buying a Boardroom license in the US	|	SALE	|	Lookup	|	Company	|	O	res	O	O	B_where	O	B_where	O	O	O	B_where
+296	|	How many missed opportunities did we had last quarter	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	I_where	O	O	O	B_where	I_where
+297	|	What is the cloud bookings target in America for the next two quarters	|	SALE	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	mea	O	B_where	O	O	B_where	I_where	I_where
+298	|	Which are the top market units regarding cloud bookings	|	SALE	|	Lookup	|	Location	|	O	O	O	argm	res	res	O	B_where	B_where
+299	|	What is the volume of all missed opportunities in the last quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	B_where	I_where	O	O	B_where	I_where
+300	|	How many customers do we have for HANA	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O	B_where
+301	|	How many cloud customers do we have in North America	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	grpby	O	O	O	O	B_where	I_where
+302	|	How many customers have bought S4 in the last quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	grpby	O	B_where	B_where	O	O	B_where	I_where
+303	|	How many new customers did we won in the last quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	O	grpby	O	O	B_where	O	O	B_where	I_where
+304	|	What is the number of customers for HANA in Canada	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	B_where	O	B_where
+305	|	How many customers have bought HANA in France	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	B_where	B_where	O	B_where
+306	|	Which customers have bought S4 and consider to buy HANA as well	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	B_where	O	O	O	B_where	B_where	O	O
+307	|	Who has bought HANA in the last quarter	|	SALE	|	Lookup	|	Company	|	O	O	B_where	B_where	O	O	B_where	I_where
+308	|	Which companies consider buying SAP Ariba	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	B_where	I_where
+309	|	Which companies have bought HANA last quarter	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	B_where	B_where	I_where
+310	|	What is the number of customers that have bought SAP Concur	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	O	B_where	B_where	I_where
+311	|	What is the amount of companies that have bought HANA	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	O	B_where	B_where
+312	|	What is the difference in revenue between best and worst salesman	|	SALE	|	Comparison	|	Numeric	|	O	O	O	O	O	mea	O	cmp	O	cmp	B_where
+313	|	What is the number of sold HANA licences in the last quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	B_where	O	O	O	B_where	I_where
+314	|	How often was HANA sold in the last 3 months	|	SALE	|	Lookup	|	Numeric	|	O	oper	O	B_where	B_where	O	O	B_where	I_where	I_where
+315	|	What are the sale numbers for the Digital Boardroom	|	SALE	|	Lookup	|	Numeric	|	O	O	O	B_where	oper	O	O	B_where	I_where
+316	|	Which companies are in the pipeline for HANA	|	SALE	|	Lookup	|	Company	|	O	res	O	O	O	O	O	B_where
+317	|	Which region has the highest sale numbers for product R3	|	SALE	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	oper	O	O	B_where
+318	|	How many opportunities have led to contracts last year	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O	B_where	I_where
+319	|	What is the number of opportunities that have not resulted in contracts last quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	O	O	O	O	O
+320	|	Which country in APJ has the highest sales numbers	|	SALE	|	Lookup	|	Location	|	O	res	O	B_where	O	O	argm	B_where	oper
+321	|	What is the number of sales for the end of first quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	B_where	I_where	I_where	I_where
+322	|	What are the numbers compared to the sales in the same quarter last year	|	SALE	|	Comparison	|	Numeric	|	O	O	O	oper	O	O	O	B_where	O	O	B_where	I_where	I_where	I_where
+323	|	What are the sale numbers compared to the first quarters in the last four years	|	SALE	|	Comparison	|	Numeric	|	O	O	O	B_where	oper	O	O	O	cmp	cmp	O	O	cmp	cmp	cmp
+324	|	What are the sale numbers compared to the last months	|	SALE	|	Comparison	|	Numeric	|	O	O	O	B_where	oper	O	O	O	B_where	I_where
+325	|	What are the sale numbers compared to the fourth quarter last year	|	SALE	|	Comparison	|	Numeric	|	O	O	O	B_where	oper	O	O	O	B_where	I_where	I_where	I_where
+326	|	What are the compared sales numbers between the fourth quarter of this and last year	|	SALE	|	Comparison	|	Numeric	|	O	O	O	O	B_where	oper	O	O	B_where	I_where	I_where	I_where	O	B_where	I_where
+327	|	Show the sale numbers for the fourth quarter of the past 3 years	|	SALE	|	Comparison	|	Numeric	|	O	O	B_where	oper	O	O	B_where	I_where	O	O	B_where	I_where	I_where
+328	|	What are the sale numbers for the past 3 first quarters	|	SALE	|	Comparison	|	Numeric	|	O	O	O	B_where	oper	O	O	B_where	I_where	I_where	I_where
+329	|	Show the sale numbers compared to the end of last months	|	SALE	|	Comparison	|	Numeric	|	O	O	B_where	oper	O	O	O	B_where	I_where	I_where	I_where
+330	|	How many opportunities have led to contracts since last quarter	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O	B_where	I_where	I_where
+331	|	What is the number of sales for HANA in the last two quarters	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	B_where	O	O	B_where	I_where	I_where
+332	|	How many HANA licenses were sold within the last month	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	B_where	O	O	B_where	I_where
+333	|	Which product was sold the most in the United States	|	SALE	|	Lookup	|	Product	|	O	res	O	B_where	O	argm	O	O	B_where	I_where
+334	|	Which is the top selling product in Argentina	|	SALE	|	Lookup	|	Product	|	O	O	O	argm	B_where	res	O	B_where
+335	|	Show us our top selling products across the whole company	|	SALE	|	Lookup	|	Product	|	O	O	O	argm	B_where	res	O	O	O	O
+336	|	Show the top five selling products in Germany during the last year	|	SALE	|	Lookup	|	Product	|	O	O	argm	argm	B_where	res	O	B_where	O	O	B_where	I_where
+337	|	Compared to last year how many deals were closed	|	SALE	|	Comparison	|	Numeric	|	O	O	cmp	cmp	O	oper	O	O	B_where
+338	|	As of now how many closed deals do we have	|	SALE	|	Lookup	|	Numeric	|	O	O	O	O	oper	B_where	O	O	O	O
+339	|	How many companies have bought Business Objects Cloud compared to last year	|	SALE	|	Comparison	|	Numeric	|	O	oper	grpby	O	O	B_where	I_where	I_where	O	O	cmp	cmp
+340	|	In which region are the most companies in the pipeline for HANA	|	SALE	|	Lookup	|	Location	|	O	O	res	O	O	argm	grpby	O	O	O	O	B_where
+341	|	How many boardroom units were sold in the last quarter	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	B_where	O	O	B_where	I_where
+342	|	What is the number of sold S4 units in the last year	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	B_where	O	O	O	B_where	I_where
+343	|	How many units were sold by John Schneider in the last three quarters	|	SALE	|	Lookup	|	Numeric	|	O	oper	O	O	B_where	O	B_where	I_where	O	O	B_where	I_where	I_where
+344	|	Which employee has sold the most boardroom units in the last year	|	SALE	|	Lookup	|	Person	|	O	res	O	B_where	O	argm	B_where	O	O	O	B_where	I_where
+345	|	Which employee has the highest number of sold units in the last six months	|	SALE	|	Lookup	|	Person	|	O	res	O	O	argm	oper	O	B_where	O	O	O	B_where	I_where	I_where
+346	|	What is the number of sold S4 units in North America	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	B_where	O	O	B_where	I_where
+347	|	Which product has had the highest number of sold units	|	SALE	|	Lookup	|	Product	|	O	res	O	O	O	argm	oper	O	B_where	O
+348	|	What is the product with the highest selling number in Italy	|	SALE	|	Lookup	|	Product	|	O	O	O	res	O	O	argm	B_where	oper	O	B_where
+349	|	Which deal in the pipeline has the biggest contract volume	|	SALE	|	Lookup	|	Sale	|	O	res	O	O	O	O	O	argm	O	mea
+350	|	Show all deals in the pipeline for Brazil	|	SALE	|	Lookup	|	Sale	|	O	O	res	O	O	O	O	B_where
+351	|	Show all opportunities in the pipeline for Argentina	|	SALE	|	Lookup	|	Sale	|	O	O	B_where	O	O	O	O	B_where
+352	|	Show us all opportunities in the pipeline for company Volkswagen	|	SALE	|	Lookup	|	Sale	|	O	O	O	B_where	O	O	O	O	O	B_where
+353	|	For which company do we have the most opportunities in the pipeline	|	SALE	|	Lookup	|	Company	|	O	O	res	O	O	O	O	argm	B_where	O	O	O
+354	|	Which company generated the most revenue in the last year	|	SALE	|	Lookup	|	Company	|	O	res	O	O	argm	mea	O	O	B_where	I_where
+355	|	Which market units have rising sale numbers	|	SALE	|	Lookup	|	Location	|	O	res	res	O	oper	B_where	oper
+356	|	Which market units have the highest close ratio	|	SALE	|	Calculate	|	Location	|	O	res	res	O	O	argm	B_where	mea
+357	|	Which region has the lowest quote to close ratio	|	SALE	|	Calculate	|	Location	|	O	res	O	O	argm	mea	mea	mea	mea
+358	|	Which employees have the highest number of sealed contracts	|	SALE	|	Lookup	|	Person	|	O	res	O	O	argm	oper	O	B_where	O
+359	|	Show all employees that have a higher close ratio than 80 percent	|	SALE	|	Calculate	|	Person	|	O	O	res	O	O	O	oper	mea	mea	O	cmp	cmp
+360	|	How many employees have generated contract values of more than 10 million	|	SALE	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	mea	O	oper	O	cmp	cmp
+361	|	Which employees have a higher contract volume of 5 million dollars	|	SALE	|	Lookup	|	Person	|	O	res	O	O	oper	O	mea	O	cmp	cmp	O
+362	|	How many companies have resigned from their contracts in the last year	|	SALE	|	Lookup	|	Company	|	O	oper	grpby	O	B_where	O	O	O	O	O	B_where	I_where
+363	|	What is the number of companies that have resigned during the last half year	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	O	B_where	O	O	B_where	I_where	I_where
+364	|	Which company has resigned the highest contract volume in the last 6 quarters	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	O	argm	O	mea	O	O	B_where	I_where	I_where
+365	|	What was the customer loyalty in the last year	|	SALE	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	O	B_where	I_where
+366	|	Which companies have resigned from their contracts within the last 2 quarters	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	O	O	O	O	O	O	B_where	I_where
+367	|	What is the current sales number compared to 2016	|	SALE	|	Comparison	|	Numeric	|	O	O	O	O	B_where	oper	O	O	cmp
+368	|	Which quarter has had the highest sale numbers last year	|	SALE	|	Lookup	|	Numeric	|	O	res	O	O	O	argm	B_where	oper	B_where	I_where
+369	|	What is the total contract volume for Nestle	|	SALE	|	Lookup	|	Numeric	|	O	O	O	O	mea	mea	O	B_where
+370	|	Which company has the highest contract volume	|	SALE	|	Lookup	|	Company	|	O	res	O	O	argm	O	mea
+371	|	Which companies have higher contract volumes than 250 million	|	SALE	|	Lookup	|	Company	|	O	res	O	oper	O	mea	O	cmp	cmp
+372	|	Tell us the number of companies that have bought HANA in the last year	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	O	B_where	B_where	O	O	B_where	I_where
+373	|	How many customers have bought a cloud product	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	B_where	O	B_where	O
+374	|	How many customers do we have for our cloud products	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O	O	B_where	O
+375	|	Which customers have bought a Hana license in the last 3 months	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	O	B_where	O	O	O	B_where	I_where	I_where
+376	|	What are the HANA growth rates	|	SALE	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea
+377	|	Show us the growth rates for HANA	|	SALE	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	B_where
+378	|	Show us our products with the highest growth rates	|	SALE	|	Calculate	|	Product	|	O	O	O	res	O	O	argm	mea	mea
+379	|	Which companies have bought a HANA license in France	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	O	B_where	O	O	B_where
+380	|	Which employee has the highest quote to close ratio	|	SALE	|	Calculate	|	Person	|	O	res	O	O	argm	mea	mea	mea	mea
+381	|	Which salesman has had the most closed deals in the last half year	|	SALE	|	Lookup	|	Person	|	O	res	O	O	O	argm	B_where	O	O	O	B_where	I_where	I_where
+382	|	Which person had the lowest number of closed deals in the last quarter	|	SALE	|	Lookup	|	Person	|	O	res	O	O	argm	oper	O	B_where	O	O	O	B_where	I_where
+383	|	How many customers do we have in China	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O	B_where
+384	|	What is the number of customers that we have in South Africa	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	O	O	O	B_where	I_where
+385	|	What is our pipeline for EMEA	|	SALE	|	Lookup	|	Sale	|	O	O	O	O	O	B_where
+386	|	Show us our cloud pipeline for Russia	|	SALE	|	Lookup	|	Sale	|	O	O	O	B_where	O	O	B_where
+387	|	What does our pipeline looks like per region	|	SALE	|	Lookup	|	Sale	|	O	O	O	O	O	O	O	grpby
+388	|	Show the pipeline per region	|	SALE	|	Lookup	|	Sale	|	O	O	O	O	grpby
+389	|	Show the on-premise pipeline per region	|	SALE	|	Lookup	|	Sale	|	O	O	B_where	O	O	grpby
+390	|	How many leads do we have in America	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O	B_where
+391	|	What is the percentage of leads in the pipeline	|	SALE	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O
+392	|	What is the percentage of leads that turned into opportunities	|	SALE	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	B_where
+393	|	What is the percentage of opportunities that have led into a closed deal	|	SALE	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	O	O	B_where	O
+394	|	Tell us the number of opportunities that we currently have in Sweden	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	O	O	B_where
+395	|	Tell us the number of items that are in the opportunity stage	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	O	O	O	O	O	B_where	O
+396	|	What are the new cloud booking numbers per market unit	|	SALE	|	Lookup	|	Numeric	|	O	O	O	O	B_where	B_where	oper	O	grpby	grpby
+397	|	What is the number of closed deals per country	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	grpby
+398	|	What is the quarterly trend of closed deals	|	SALE	|	Lookup	|	Numeric	|	O	O	O	grpby	O	O	B_where	O
+399	|	What are our top market units regarding cloud revenue	|	SALE	|	Lookup	|	Location	|	O	O	O	argm	res	res	O	B_where	mea
+400	|	What are the weakest market units related to our service revenue	|	SALE	|	Lookup	|	Location	|	O	O	O	argm	res	res	O	O	O	B_where	mea
+401	|	Which employee has sealed the biggest deal in the last quarter	|	SALE	|	Lookup	|	Person	|	O	res	O	B_where	O	argm	O	O	O	B_where	I_where
+402	|	Which salesman has closed the biggest deal in Italy for this year	|	SALE	|	Lookup	|	Person	|	O	res	O	B_where	O	argm	O	O	B_where	O	B_where	I_where
+403	|	In which region do we have the most opportunities	|	SALE	|	Lookup	|	Location	|	O	O	res	O	O	O	O	argm	B_where
+404	|	In which countries do we have the biggest opportunities	|	SALE	|	Lookup	|	Location	|	O	O	res	O	O	O	O	argm	B_where
+405	|	Which region holds the biggest opportunities	|	SALE	|	Lookup	|	Location	|	O	res	O	O	argm	B_where
+406	|	Which country holds the biggest opportunity	|	SALE	|	Lookup	|	Location	|	O	res	O	O	argm	B_where
+407	|	Which regions promises the biggest leads	|	SALE	|	Lookup	|	Location	|	O	res	O	O	argm	B_where
+408	|	Which region is the most promising regarding closed deals in this year	|	SALE	|	Lookup	|	Location	|	O	res	O	O	argm	O	O	B_where	O	O	B_where	I_where
+409	|	How many customers do we currently have in Austria	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O	O	B_where
+410	|	How many customers are currently in Austria	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	B_where
+411	|	What is the number of customers that have bought IoT services in Mexico	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	O	B_where	B_where	O	O	B_where
+412	|	What is our biggest cloud customer in Europe	|	SALE	|	Lookup	|	Company	|	O	O	O	argm	B_where	grpby	O	B_where
+413	|	Who is the biggest company in the pipeline for Europe	|	SALE	|	Lookup	|	Company	|	O	O	O	argm	res	O	O	O	O	B_where
+414	|	Which company in the on-premise pipeline has the biggest opportunity	|	SALE	|	Lookup	|	Company	|	O	res	O	O	B_where	O	O	O	argm	B_where
+415	|	Which company in Asia keeps the biggest opportunity	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	O	O	argm	B_where
+416	|	Which person has the most opportunities in his pipeline	|	SALE	|	Lookup	|	Person	|	O	res	O	O	argm	B_where	O	O	O
+417	|	Which countries promise the biggest pipeline	|	SALE	|	Lookup	|	Location	|	O	res	O	O	argm	O
+418	|	Which countries keep the pipeline with the biggest contract volume	|	SALE	|	Lookup	|	Location	|	O	res	O	O	O	O	O	argm	O	mea
+419	|	Show the market unit with the biggest pipeline	|	SALE	|	Lookup	|	Location	|	O	O	res	res	O	O	argm	O
+420	|	What is the total contract volume for HANA in the pipeline	|	SALE	|	Lookup	|	Numeric	|	O	O	O	O	O	mea	O	B_where	O	O	O
+421	|	What is the selling growth rate of Analytics licenses	|	SALE	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	mea	O	B_where	O
+422	|	How is the development of sold Analytic licenses in the last 4 quarters	|	SALE	|	Lookup	|	Numeric	|	O	O	O	O	O	B_where	B_where	O	O	O	B_where	I_where	I_where
+423	|	What are the top selling products in China	|	SALE	|	Lookup	|	Product	|	O	O	O	argm	B_where	res	O	B_where
+424	|	What is the conversion rate to closed deals in India	|	SALE	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	B_where	O	O	B_where
+425	|	Who is the salesmen that is responsible for Thyssen Krupp	|	SALE	|	Lookup	|	Person	|	O	O	O	res	O	O	O	O	B_where	I_where
+426	|	Who is the account executive for Thyssen Krupp	|	SALE	|	Lookup	|	Person	|	O	O	O	res	res	O	B_where	I_where
+427	|	For which persons is the sales volume greater than 1 million	|	SALE	|	Lookup	|	Person	|	O	O	res	O	O	B_where	mea	oper	O	cmp	cmp
+428	|	How many deals have we won in this year	|	SALE	|	Lookup	|	Numeric	|	O	oper	O	O	O	B_where	O	B_where	I_where
+429	|	What is the number of lost deals	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O
+430	|	What is the difference between lost deals and won deals	|	SALE	|	Comparison	|	Numeric	|	O	O	O	O	O	cmp	O	O	cmp	O
+431	|	Show all sales which were booked in the last quarter	|	SALE	|	Lookup	|	Sale	|	O	O	B_where	O	O	B_where	O	O	B_where	I_where
+432	|	What is the number of won deals in the last quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	B_where	I_where
+433	|	For how many persons is the sales volume greater than 1 million	|	SALE	|	Lookup	|	Numeric	|	O	O	oper	O	O	O	mea	mea	oper	O	cmp	cmp
+434	|	How many new cloud deals were booked this year	|	SALE	|	Lookup	|	Numeric	|	O	oper	O	B_where	O	O	B_where	B_where	I_where
+435	|	What is the number of new cloud bookings in the last quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	O	B_where	B_where	O	O	B_where	I_where
+436	|	How many new on-premise deals were closed per quarter	|	SALE	|	Lookup	|	Numeric	|	O	oper	O	B_where	O	O	B_where	O	grpby
+437	|	Tell us how many cloud deals have we won per quarter in the last year	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	B_where	O	O	O	B_where	O	grpby	O	O	B_where	I_where
+438	|	Which market units have closed the most cloud deals in this year	|	SALE	|	Lookup	|	Numeric	|	O	res	res	O	B_where	O	argm	B_where	O	O	B_where	I_where
+439	|	Show the number of new cloud bookings per market unit	|	SALE	|	Lookup	|	Numeric	|	O	O	oper	O	O	B_where	B_where	O	grpby	grpby
+440	|	Which region has booked the most on-premise deals in the past quarter	|	SALE	|	Lookup	|	Location	|	O	res	O	B_where	O	argm	B_where	O	O	O	B_where	I_where
+441	|	In the last 4 months how many deals were closed	|	SALE	|	Lookup	|	Numeric	|	O	O	B_where	I_where	I_where	O	oper	O	O	B_where
+442	|	For 2016 how many new cloud customers have we won	|	SALE	|	Lookup	|	Numeric	|	O	B_where	O	oper	O	B_where	grpby	O	O	B_where
+443	|	Starting from Q1 2017 what are the sales numbers for North America	|	SALE	|	Lookup	|	Numeric	|	O	O	B_where	I_where	O	O	O	B_where	oper	O	B_where	I_where
+444	|	Starting from the last two quarters how many deals were closed per market unit	|	SALE	|	Lookup	|	Numeric	|	O	O	O	B_where	I_where	I_where	O	oper	O	O	B_where	O	grpby	grpby
+445	|	Which employee has closed the most deals in the last quarter	|	SALE	|	Lookup	|	Person	|	O	res	O	B_where	O	argm	O	O	O	B_where	I_where
+446	|	What is the sales forecast in North America	|	SALE	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	B_where	I_where
+447	|	Which region has the highest sales forecast	|	SALE	|	Calculate	|	Location	|	O	res	O	O	argm	mea	mea
+448	|	Which country has the most opportunities in its pipeline	|	SALE	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	O	O	O
+449	|	How many salesmen are working in EMEA	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	B_where
+450	|	What is the number of salesmen in France	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	B_where
+451	|	What was the average volume for sales in the last two quarters	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	mea	O	B_where	O	O	B_where	I_where	I_where
+452	|	What is the number of sold cloud products in the last quarter	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	B_where	O	O	O	B_where	I_where
+453	|	How many cloud products were sold this year	|	SALE	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	B_where	B_where	I_where
+454	|	What is the cloud share of our total revenue in this year	|	SALE	|	Calculate	|	Numeric	|	O	O	O	B_where	oper	O	O	O	mea	O	B_where	I_where
+455	|	What is the number of closed deals per product	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	grpby
+456	|	What is the volume of closed deals per region in this year	|	SALE	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	O	O	grpby	O	B_where	I_where
+457	|	How many salesmen are employed per region	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	grpby
+458	|	What is the number of employees per product	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	O	O	O	grpby
+459	|	Show the top 3 countries with the most salesmen	|	SALE	|	Lookup	|	Location	|	O	O	argm	argm	res	O	O	argm	grpby
+460	|	What is the difference in closed deals between USA and India	|	SALE	|	Comparison	|	Numeric	|	O	O	O	O	O	B_where	O	O	cmp	O	cmp
+461	|	Show the number of closed deals per market unit	|	SALE	|	Lookup	|	Numeric	|	O	O	oper	O	B_where	O	O	grpby	grpby
+462	|	How many open items do we have in the pipeline for Russia	|	SALE	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O	O	O	O	O	B_where
+463	|	What are the numbers of closed deals between USA and Canada	|	SALE	|	Comparison	|	Numeric	|	O	O	O	oper	O	B_where	O	O	cmp	O	cmp
+464	|	Which organization has more closed deals in North America USA or Canada	|	SALE	|	Comparison	|	Location	|	O	res	O	oper	B_where	O	O	B_where	I_where	cmp	O	cmp
+465	|	Compare the number of representatives in Austria and Switzerland	|	SALE	|	Comparison	|	Numeric	|	O	O	oper	O	grpby	O	cmp	O	cmp
+466	|	What is the average revenue for deals in Sweden and Norway	|	SALE	|	Lookup	|	Numeric	|	O	O	O	oper	mea	O	O	O	cmp	O	cmp
+467	|	What is the average revenue for deals in Sweden compared to Norway	|	SALE	|	Comparison	|	Numeric	|	O	O	O	oper	mea	O	O	O	cmp	O	O	cmp
+468	|	Which country in EMEA has the biggest contract volume on average	|	SALE	|	Lookup	|	Location	|	O	res	O	B_where	O	O	argm	O	mea	O	oper
+469	|	Compare revenue for SAP HANA and SAP Digital Boardroom	|	SALE	|	Comparison	|	Numeric	|	O	mea	O	cmp	cmp	O	cmp	cmp	cmp
+470	|	Which product generates more revenue in EMEA SAP HANA or SAP Digital Boardroom	|	SALE	|	Comparison	|	Product	|	O	res	O	oper	mea	O	B_where	cmp	cmp	O	cmp	cmp	cmp
+471	|	Which region has more closed deals APJ or EMEA	|	SALE	|	Comparison	|	Location	|	O	res	O	oper	B_where	O	cmp	O	cmp
+472	|	What is the difference in revenue between Spain and Italy in 2017	|	SALE	|	Comparison	|	Numeric	|	O	O	O	O	O	mea	O	cmp	O	cmp	O	B_where
+473	|	Name the top market units with the biggest revenue growth rates in Q4 2016	|	SALE	|	Calculate	|	Location	|	O	O	argm	res	res	O	O	argm	mea	mea	mea	O	B_where	I_where
+474	|	What is the revenue for the best representative in EMEA compared to the one in APJ	|	SALE	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	argm	grpby	O	cmp	O	O	O	O	O	cmp
+475	|	Compare the number of closed deals for the best representative and the worst	|	SALE	|	Comparison	|	Numeric	|	O	O	oper	O	B_where	O	O	O	cmp	grpby	O	O	cmp
+476	|	What are the revenue growth rates for Todd Packer	|	SALE	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	B_where	I_where
+477	|	Which representative has had the biggest revenue growth rates in 2016	|	SALE	|	Calculate	|	Person	|	O	res	O	O	O	argm	mea	mea	mea	O	B_where
+478	|	Compare the number of lost deals in Germany to France last quarter	|	SALE	|	Comparison	|	Numeric	|	O	O	oper	O	B_where	O	O	cmp	O	cmp	B_where	I_where
+479	|	Which country has lost the most in the last year	|	SALE	|	Lookup	|	Location	|	O	res	O	B_where	O	argm	O	O	B_where	I_where
+480	|	For each year in the last 4 years what was the product with the biggest revenue	|	SALE	|	Lookup	|	Product	|	O	O	grpby	O	O	B_where	I_where	I_where	O	O	O	res	O	O	argm	mea
+481	|	For each quarter in the last 4 quarters which representative had the most closed deals	|	SALE	|	Lookup	|	Person	|	O	O	grpby	O	O	B_where	I_where	I_where	O	res	O	O	argm	B_where	O
+482	|	Compare the number of representatives between Germany and USA	|	SALE	|	Comparison	|	Numeric	|	O	O	oper	O	grpby	O	cmp	O	cmp
+483	|	What are the revenue growth rates for the Digital Boardroom since last year	|	SALE	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	O	B_where	I_where	O	B_where	I_where
+484	|	Which product was sold the most in the last quarter	|	SALE	|	Lookup	|	Product	|	O	res	O	B_where	O	argm	O	O	B_where	I_where
+485	|	What is our top product with the biggest selling numbers	|	SALE	|	Lookup	|	Product	|	O	O	O	argm	res	O	O	argm	B_where	oper
+486	|	Compare the selling numbers for SAP HR and SAP SuccessFactors	|	SALE	|	Comparison	|	Numeric	|	O	O	B_where	oper	O	cmp	cmp	O	cmp	cmp
+487	|	What is the revenue for customer Audi	|	SALE	|	Lookup	|	Numeric	|	O	O	O	mea	O	grpby	B_where
+488	|	Show the revenue for all customers in China	|	SALE	|	Lookup	|	Numeric	|	O	O	mea	O	O	grpby	O	B_where
+489	|	Tell us the total revenue for all customers in Australia	|	SALE	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	grpby	O	B_where
+490	|	Show the total revenue for customer Porsche	|	SALE	|	Lookup	|	Numeric	|	O	O	O	mea	O	grpby	B_where
+491	|	Show revenue for customers in APJ	|	SALE	|	Lookup	|	Numeric	|	O	mea	O	grpby	O	B_where
+492	|	Show the total revenue for customers based in Austria	|	SALE	|	Lookup	|	Numeric	|	O	O	O	mea	O	grpby	O	O	B_where
+493	|	Show the revenue per customer in Peru	|	SALE	|	Lookup	|	Numeric	|	O	O	mea	O	grpby	O	B_where
+494	|	What is the revenue in Australia per customer	|	SALE	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	O	grpby
+495	|	Which customer has the highest revenue worldwide	|	SALE	|	Lookup	|	Company	|	O	res	O	O	argm	mea	O
+496	|	Which customer in Switzerland has the highest cloud revenue	|	SALE	|	Lookup	|	Company	|	O	res	O	B_where	O	O	argm	B_where	mea
+497	|	Which top five customers generate more than seven million in cloud revenue	|	SALE	|	Lookup	|	Company	|	O	argm	argm	res	O	oper	O	cmp	cmp	O	B_where	mea
+498	|	How many customers are having revenues higher than 250 million US dollar	|	SALE	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	mea	oper	O	cmp	cmp	O	O
+499	|	Show the customer with the highest revenue in Poland	|	SALE	|	Lookup	|	Company	|	O	O	res	O	O	argm	mea	O	B_where
+500	|	Tell me the names of the customers with more than one million in cloud revenue	|	SALE	|	Lookup	|	Company	|	O	O	O	O	O	O	res	O	oper	O	cmp	cmp	O	B_where	mea
+501	|	Which are the customers with more revenue than fifty million	|	SALE	|	Lookup	|	Company	|	O	O	O	res	O	oper	mea	O	cmp	cmp
+502	|	Show all customers that have an annually revenue of more than ten million	|	SALE	|	Lookup	|	Company	|	O	O	res	O	O	O	grpby	mea	O	oper	O	cmp	cmp
+503	|	Which deal has the biggest volume in EMEA compared to APJ	|	SALE	|	Comparison	|	Sale	|	O	res	O	O	argm	mea	O	cmp	O	O	cmp
+504	|	Which customer has generated the most revenue in America	|	SALE	|	Lookup	|	Company	|	O	res	O	O	O	argm	mea	O	B_where
+505	|	Compare the contract volume for customer AT&T and Verizon	|	SALE	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	cmp	O	cmp
+506	|	What was the revenue for Samsung between Q4 2016 and Q4 2017	|	SALE	|	Comparison	|	Numeric	|	O	O	O	mea	O	B_where	O	cmp	cmp	O	cmp	cmp
+507	|	Show all employees with revenue growth rates of more than 5 percent	|	SALE	|	Calculate	|	Person	|	O	O	res	O	mea	mea	mea	O	oper	O	cmp	O
+508	|	Which salesman has the highest share of our total revenue	|	SALE	|	Calculate	|	Person	|	O	res	O	O	argm	oper	O	O	O	mea
+509	|	What is the difference between closed and lost deals for this quarter	|	SALE	|	Comparison	|	Numeric	|	O	O	O	O	O	cmp	O	cmp	O	O	B_where	I_where
+510	|	Which region has more lost deals than closed	|	SALE	|	Comparison	|	Location	|	O	res	O	oper	cmp	O	O	cmp
+511	|	What is the headcount for North America	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	I_where
+512	|	How many people are currently employed in Brazil	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O	B_where
+513	|	How many people are working for SAP in Brazil	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O	O	B_where
+514	|	How many people are employed in Israel	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	B_where
+515	|	What is the number of employed people in Israel	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	O	O	O	B_where
+516	|	What is the employee number for DACH	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	oper	O	B_where
+517	|	How many FTE are working in DACH	|	HR	|	Lookup	|	Numeric	|	O	oper	mea	O	O	O	B_where
+518	|	How many people are working in Palo Alto	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	B_where	I_where
+519	|	How many people are working for our cloud products	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O	B_where	O
+520	|	What does the headcount trend look like over the last four quarters	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	O	O	O	B_where	I_where	I_where
+521	|	What did the development of the headcount look like in the past four quarters	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea	O	O	O	O	B_where	I_where	I_where
+522	|	Show the headcount trend for the last four quarters	|	HR	|	Lookup	|	Numeric	|	O	O	mea	O	O	O	B_where	I_where	I_where
+523	|	What is the amount of people working in the research and development department	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	O	O	O	O	B_where	I_where	I_where	O
+524	|	How has the headcount developed in the last two years	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	O	O	O	B_where	I_where	I_where
+525	|	Show us the development of our headcount in the last four quarters	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea	O	O	B_where	I_where	I_where
+526	|	How many people are currently working at S4	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O	B_where
+527	|	What is the average fully loaded cost rate in EMEA	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	mea	mea	mea	mea	O	B_where
+528	|	What is the headcount for America in Q1 2017	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	O	B_where	I_where
+529	|	What is the total headcount plan for USA from 2017 to 2019	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	B_where	O	B_where	I_where	I_where
+530	|	How is the employee satisfaction by region	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	grpby
+531	|	How is the employee satisfaction by organization	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	grpby
+532	|	Which locations have the highest employee satisfaction	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	O	mea
+533	|	Which location has the happiest employees	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	O
+534	|	For which region is the employee satisfaction the highest	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	mea	O	argm
+535	|	In which locations is the employee satisfaction the highest	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	mea	O	argm
+536	|	In which locations is the employee satisfaction below 95 percent	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	mea	oper	cmp	cmp
+537	|	How many sales people are working in North America	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O	B_where	I_where
+538	|	How many people are working in North America for the sales department	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	B_where	I_where	O	O	B_where	O
+539	|	How many people is Dwight Schrute managing	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	B_where	I_where	mea
+540	|	How many people are managed by Dwight Schrute	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	mea	O	B_where	I_where
+541	|	What is the number of employees that are managed by Michael Scott	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	O	O	O	mea	O	B_where	I_where
+542	|	How many employees is Michael Scott managing	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	B_where	I_where	mea
+543	|	What is the average wage for employees in EMEA	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	mea	O	O	O	B_where
+544	|	What is the average wage for managers in APJ	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	mea	O	B_where	O	B_where
+545	|	What does our salary structure for employees in Germany look like based on their position	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O	B_where	O	O	O	O	O	grpby
+546	|	Based on the salary level what does the cost structure look like in Italy	|	HR	|	Lookup	|	Numeric	|	O	O	O	grpby	grpby	O	O	O	mea	mea	O	O	O	B_where
+547	|	What is the employee satisfaction for Palo Alto compared to Newtown Square	|	HR	|	Comparison	|	Numeric	|	O	O	O	O	mea	O	cmp	cmp	O	O	cmp	cmp
+548	|	Which development units have the most employees	|	HR	|	Lookup	|	Person	|	O	res	res	O	O	argm	O
+549	|	Which market units had the highest employee growth rates in the last year	|	HR	|	Calculate	|	Location	|	O	res	res	O	O	argm	mea	mea	mea	O	O	B_where	I_where
+550	|	What is the share of early talents in Walldorf	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	I_where	O	B_where
+551	|	Which country has the highest share of early talents	|	HR	|	Calculate	|	Location	|	O	res	O	O	argm	oper	O	B_where	I_where
+552	|	What is the average number of learning completions across the company	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	oper	O	mea	O	O	O	O
+553	|	How many online courses has an employee completed on average	|	HR	|	Lookup	|	Numeric	|	O	oper	O	mea	O	O	O	O	O	oper
+554	|	How many people were hired in the last quarter	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	B_where	O	O	B_where	I_where
+555	|	Which country has hired the most people in the last quarter	|	HR	|	Lookup	|	Location	|	O	res	O	B_where	O	argm	O	O	O	B_where	I_where
+556	|	Which are the 5 biggest locations based on their headcount	|	HR	|	Lookup	|	Location	|	O	O	O	argm	argm	res	O	O	O	mea
+557	|	Which are the top 3 locations based on the number of employees	|	HR	|	Lookup	|	Location	|	O	O	O	argm	argm	res	O	O	O	oper	O	O
+558	|	Which locations have the highest employee fluctuation	|	HR	|	Calculate	|	Location	|	O	res	O	O	argm	O	mea
+559	|	For which location is the employee fluctuation rate the highest	|	HR	|	Calculate	|	Location	|	O	O	res	O	O	O	mea	mea	O	argm
+560	|	Which location has had the highest fluctuation last year	|	HR	|	Calculate	|	Location	|	O	res	O	O	O	argm	mea	B_where	I_where
+561	|	Which locations have more than 10 thousand employees	|	HR	|	Lookup	|	Location	|	O	res	O	oper	O	cmp	cmp	O
+562	|	What is the percentage of women in management positions	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	B_where	I_where
+563	|	How many women are having a leadership position	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	B_where	I_where
+564	|	What is the share of women in leadership positions	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	B_where	I_where
+565	|	How many women are working as a manager in Germany	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O	B_where	O	B_where
+566	|	In which country is the percentage of women in management positions the highest	|	HR	|	Calculate	|	Location	|	O	O	res	O	O	oper	O	B_where	O	B_where	I_where	O	argm
+567	|	What is the number of women that are having a leadership position in North America	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	O	B_where	I_where	O	B_where	I_where
+568	|	What is the whole amount of women in leader positions across the company	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	oper	O	B_where	O	B_where	I_where	O	O	O
+569	|	What is the stake of women in SAP	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	O
+570	|	SAP has employed how many men	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	oper	B_where
+571	|	How many men are employed at SAP	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O
+572	|	How many women are working at SAP compared to men	|	HR	|	Comparison	|	Numeric	|	O	oper	cmp	O	O	O	O	O	O	cmp
+573	|	Compared to men how many women are employed at SAP	|	HR	|	Comparison	|	Numeric	|	O	O	cmp	O	oper	cmp	O	O	O	O
+574	|	What is the share of women in leadership positions compared to men	|	HR	|	Comparison	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	O	O	O
+575	|	What is the difference between men and women in management positions	|	HR	|	Comparison	|	Numeric	|	O	O	O	O	O	cmp	O	cmp	O	B_where	I_where
+576	|	Tell me the stake of women with managerial responsibility compared to men	|	HR	|	Comparison	|	Numeric	|	O	O	O	oper	O	cmp	O	B_where	I_where	O	O	cmp
+577	|	How many women have management tasks in Indonesia	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	B_where	I_where	O	B_where
+578	|	Which countries have the highest employee growth rates	|	HR	|	Calculate	|	Location	|	O	res	O	O	argm	mea	mea	mea
+579	|	In which region is the number of employees growing	|	HR	|	Calculate	|	Location	|	O	O	res	O	O	oper	O	O	mea
+580	|	How strong is the number of employees growing in Sweden	|	HR	|	Calculate	|	Numeric	|	O	O	O	O	oper	O	O	mea	O	B_where
+581	|	Is the headcount increasing or decreasing for Spain	|	HR	|	Calculate	|	Numeric	|	O	O	mea	cmp	O	cmp	O	B_where
+582	|	Which location has the fewest number of people employed	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	oper	O	O	O
+583	|	In which country is the average wage per employee the lowest	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	oper	mea	O	O	O	argm
+584	|	Which country has the highest average wage per employee	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	oper	mea	O	O
+585	|	What is our monthly spend for external workforce	|	HR	|	Lookup	|	Numeric	|	O	O	O	grpby	mea	O	B_where	I_where
+586	|	In which department is the monthly spend for external services the highest	|	HR	|	Lookup	|	Person	|	O	O	res	O	O	grpby	mea	O	B_where	I_where	O	argm
+587	|	Which country has the highest spend for consulting services	|	HR	|	Lookup	|	Numeric	|	O	res	O	O	argm	mea	O	B_where	I_where
+588	|	How high is the spend for non billable services per month	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	B_where	I_where	I_where	O	grpby
+589	|	What is the fastest growing location in India	|	HR	|	Calculate	|	Location	|	O	O	O	argm	mea	res	O	B_where
+590	|	What is the fastest growing country	|	HR	|	Calculate	|	Location	|	O	O	O	argm	mea	res
+591	|	Which regions are growing the fastest	|	HR	|	Calculate	|	Location	|	O	res	O	mea	O	argm
+592	|	Which locations have the highest fluctuation rates	|	HR	|	Calculate	|	Location	|	O	res	O	O	argm	mea	mea
+593	|	In which region is the fluctuation rate the lowest	|	HR	|	Calculate	|	Location	|	O	O	res	O	O	mea	mea	O	argm
+594	|	What is the difference between hired people in Germany and North America	|	HR	|	Comparison	|	Numeric	|	O	O	O	O	O	B_where	O	O	cmp	O	cmp	cmp
+595	|	What is the spend on external workforce in the last quarter	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	I_where	O	O	B_where	I_where
+596	|	How high is our external workforce spend in North America	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	B_where	I_where	mea	O	B_where	I_where
+597	|	Which location hired the most women during the last year	|	HR	|	Lookup	|	Location	|	O	res	B_where	O	argm	B_where	O	O	B_where	I_where
+598	|	Which employee has the highest salary	|	HR	|	Lookup	|	Person	|	O	res	O	O	argm	mea
+599	|	Which employee has the biggest wage	|	HR	|	Lookup	|	Person	|	O	res	O	O	argm	mea
+600	|	Which are the top three employees with the highest salary	|	HR	|	Lookup	|	Person	|	O	O	O	argm	argm	res	O	O	argm	mea
+601	|	Which job role has the most diversity of employees	|	HR	|	Calculate	|	Person	|	O	res	O	O	O	argm	oper	O	O
+602	|	Which job position has the biggest gender diversity among their workers	|	HR	|	Calculate	|	Person	|	O	res	O	O	O	argm	mea	mea	O	O	O
+603	|	Which department has the lowest gender diversity among its employees	|	HR	|	Calculate	|	Person	|	O	res	O	O	argm	mea	mea	O	O	O
+604	|	Which department hired the most people during the last four years	|	HR	|	Lookup	|	Person	|	O	res	B_where	O	argm	O	O	O	B_where	I_where	I_where
+605	|	Compared to last year how many new hirings did we had so far	|	HR	|	Comparison	|	Numeric	|	O	O	cmp	cmp	O	oper	O	B_where	O	O	O	O	O
+606	|	How many people have joined the company since last year	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	B_where	O	O	B_where	I_where	I_where
+607	|	In comparison to Russia which country has hired more people over the last four months	|	HR	|	Comparison	|	Location	|	O	O	O	cmp	O	res	O	B_where	oper	O	O	O	B_where	I_where	I_where
+608	|	What is the average salary in Germany compared to India	|	HR	|	Comparison	|	Numeric	|	O	O	O	oper	mea	O	cmp	O	O	cmp
+609	|	What is the difference between Germany and France in salary on average	|	HR	|	Comparison	|	Numeric	|	O	O	O	O	O	cmp	O	cmp	O	mea	O	oper
+610	|	Which country has the highest salaries on average	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	mea	O	oper
+611	|	Compared to France which countries have higher incomes on average	|	HR	|	Comparison	|	Location	|	O	O	cmp	O	res	O	oper	mea	O	oper
+612	|	Which countries have higher incomes on average than the United States	|	HR	|	Comparison	|	Location	|	O	res	O	oper	mea	O	oper	O	O	cmp	cmp
+613	|	How many countries have higher incomes on average than Spain	|	HR	|	Comparison	|	Numeric	|	O	oper	grpby	O	oper	mea	O	oper	O	cmp
+614	|	Which countries have rising employee numbers	|	HR	|	Calculate	|	Location	|	O	res	O	oper	O	oper
+615	|	How many people are working for SAP	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O
+616	|	How many women are working at SAP	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O
+617	|	What is the number of women across the whole company	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	O
+618	|	How many women are working in Israel compared to men	|	HR	|	Comparison	|	Numeric	|	O	oper	cmp	O	O	O	B_where	O	O	cmp
+619	|	In which country are working the most women	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	argm	B_where
+620	|	What is the ratio between men and women at SAP	|	HR	|	Comparison	|	Numeric	|	O	O	O	oper	O	cmp	O	cmp	O	O
+621	|	What is the relation between men and women in SAP	|	HR	|	Comparison	|	Numeric	|	O	O	O	O	O	cmp	O	cmp	O	O
+622	|	What is the relation between men and women in leadership positions	|	HR	|	Comparison	|	Numeric	|	O	O	O	oper	O	cmp	O	cmp	O	B_where	I_where
+623	|	Which countries have the biggest differences between men and women in leadership positions	|	HR	|	Comparison	|	Location	|	O	res	O	O	argm	O	O	cmp	O	cmp	O	B_where	I_where
+624	|	How many women are managers compared to men	|	HR	|	Comparison	|	Numeric	|	O	oper	cmp	O	B_where	O	O	cmp
+625	|	What is the amount of women in Germany	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	B_where
+626	|	How many students are working at SAP	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O
+627	|	Which country has the most students employed	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	O
+628	|	How many students were hired in the last year	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	B_where	O	O	B_where	I_where
+629	|	What is the number of students that were hired in the last quarter	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	B_where	O	O	B_where	I_where
+630	|	How many people are working in Bangalore compared to Seattle	|	HR	|	Comparison	|	Numeric	|	O	oper	O	O	O	O	cmp	O	O	cmp
+631	|	Which locations have more employees than Paris	|	HR	|	Comparison	|	Location	|	O	res	O	oper	O	O	cmp
+632	|	Which locations have hired the least employees in the last months	|	HR	|	Lookup	|	Location	|	O	res	O	B_where	O	argm	O	O	O	B_where	I_where
+633	|	Which locations have hired more than 100 people in the last months	|	HR	|	Lookup	|	Location	|	O	res	O	B_where	oper	O	cmp	O	O	O	B_where	I_where
+634	|	In which country are working the most people	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	argm	O
+635	|	In which country are working more people than Canada	|	HR	|	Comparison	|	Location	|	O	O	res	O	O	oper	O	O	cmp
+636	|	Which location has less employees than Beijing	|	HR	|	Comparison	|	Location	|	O	res	O	oper	O	O	cmp
+637	|	Which country has the most employed people	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	O	O
+638	|	How many people are working in the Finance and administration department	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O	B_where	I_where	I_where	O
+639	|	Which is the biggest department at SAP	|	HR	|	Lookup	|	Person	|	O	O	O	argm	res	O	O
+640	|	What is the biggest department in North America	|	HR	|	Lookup	|	Person	|	O	O	O	argm	res	O	B_where	I_where
+641	|	Which department has the most employees in Germany	|	HR	|	Lookup	|	Person	|	O	res	O	O	argm	O	O	B_where
+642	|	How many men are working at product and innovation	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	B_where	I_where	I_where
+643	|	How many women are working in human resources	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	B_where	I_where
+644	|	How many external hirings did we have in the last quarter	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	B_where	O	O	O	O	O	B_where	I_where
+645	|	How many early talents were hired last quarter	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	I_where	O	B_where	B_where	I_where
+646	|	How many leaders do we have in Europe	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O	B_where
+647	|	How many leading positions do we have in Europe compared to Asia	|	HR	|	Comparison	|	Numeric	|	O	oper	B_where	I_where	O	O	O	O	cmp	O	O	cmp
+648	|	What is the most frequent position in Germany	|	HR	|	Lookup	|	Person	|	O	O	O	argm	O	res	O	B_where
+649	|	What is the stake of early talents in Germany	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	I_where	O	B_where
+650	|	What is the stake of hired early talents in the last quarter	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	B_where	I_where	O	O	B_where	I_where
+651	|	How many manager positions are hold by women	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	I_where	O	O	O	B_where
+652	|	Show us the gender diversity by department	|	HR	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	grpby
+653	|	Show the headcount per department	|	HR	|	Lookup	|	Numeric	|	O	O	mea	O	grpby
+654	|	What is the total headcount for each department	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	grpby
+655	|	Show us the headcount per region	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	O	grpby
+656	|	What is the total headcount grouped by region	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	grpby
+657	|	Which region has the highest headcount	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	mea
+658	|	What does the age diversity look like	|	HR	|	Calculate	|	Numeric	|	O	O	O	mea	oper	O	O
+659	|	What does the headcount distribution looks like per department	|	HR	|	Calculate	|	Numeric	|	O	O	O	mea	oper	O	O	O	grpby
+660	|	Which department had the biggest headcount movement in this year	|	HR	|	Calculate	|	Person	|	O	res	O	O	argm	mea	mea	O	B_where	I_where
+661	|	How many women are working in Europe compared to America	|	HR	|	Comparison	|	Numeric	|	O	oper	B_where	O	O	O	cmp	O	O	cmp
+662	|	What is the total headcount over the past 4 years	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	B_where	I_where	I_where
+663	|	Which location has the highest employee costs	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	mea	mea
+664	|	Which are the top 3 locations with the biggest employee costs	|	HR	|	Lookup	|	Location	|	O	O	O	argm	argm	res	O	O	argm	mea	mea
+665	|	What is the salary of Bill McDermott	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	O	B_where	I_where
+666	|	How many salesmen do we have in Germany	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	O	O	B_where
+667	|	What is the headcount for locations in Greece	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	O	res	O	B_where
+668	|	What is the average wage for managers in North America	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	mea	O	B_where	O	B_where	I_where
+669	|	Which location has completed the most online courses on average	|	HR	|	Lookup	|	Location	|	O	res	O	O	O	argm	O	mea	O	oper
+670	|	Which country has the least percentage of women with subordinates	|	HR	|	Calculate	|	Location	|	O	res	O	O	argm	oper	O	B_where	O	B_where
+671	|	For which region is the share of women in management position the lowest	|	HR	|	Calculate	|	Location	|	O	O	res	O	O	oper	O	B_where	O	B_where	I_where	O	argm
+672	|	How many employees do we have in Denmark	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O	B_where
+673	|	What is the number of employees in India	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	O	O	B_where
+674	|	How many learning courses were finished in China compared to the US	|	HR	|	Comparison	|	Numeric	|	O	oper	mea	mea	O	O	O	cmp	O	O	O	cmp
+675	|	What is the headcount distribution per location	|	HR	|	Lookup	|	Numeric	|	O	O	O	mea	oper	O	grpby
+676	|	Show the headcount distribution for countries in Europe	|	HR	|	Lookup	|	Numeric	|	O	O	mea	oper	O	res	O	B_where
+677	|	In which region are working the happiest employees	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	argm	O
+678	|	Which country has completed the most learning courses	|	HR	|	Lookup	|	Location	|	O	O	O	O	O	O	O	O
+679	|	What is the average headcount per region	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	mea	O	grpby
+680	|	How many people is Michael Scott managing in Germany	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	B_where	I_where	mea	O	B_where
+681	|	Which region has finished the most courses on average	|	HR	|	Lookup	|	Location	|	O	res	O	O	O	argm	mea	O	oper
+682	|	Jimmy Kimmel is the manager of how many people	|	HR	|	Lookup	|	Numeric	|	B_where	I_where	O	O	mea	O	O	oper	O
+683	|	How many people are working for Andy Bernard	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	B_where	I_where
+684	|	Show the percentage of women per department	|	HR	|	Calculate	|	Numeric	|	O	O	oper	O	B_where	O	grpby
+685	|	Which department has the highest share of women	|	HR	|	Calculate	|	Person	|	O	res	O	O	argm	oper	O	B_where
+686	|	How many new hirings did we have last quarter	|	HR	|	Lookup	|	Numeric	|	O	oper	O	mea	O	O	O	B_where	I_where
+687	|	How many employees where hired compared to last year	|	HR	|	Comparison	|	Numeric	|	O	oper	O	O	mea	O	O	cmp	cmp
+688	|	Which region has the biggest number of new hirings for this year	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	oper	O	O	mea	O	B_where	I_where
+689	|	Which organization has the most employees	|	HR	|	Lookup	|	Location	|	O	res	O	O	argm	O
+690	|	Show the number of women per organization	|	HR	|	Lookup	|	Numeric	|	O	O	oper	O	B_where	O	grpby
+691	|	Show the headcount distribution per country	|	HR	|	Lookup	|	Numeric	|	O	O	mea	O	O	grpby
+692	|	How many organizations do we have worldwide	|	HR	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O
+693	|	How many organizations do we have in APJ	|	HR	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O	B_where
+694	|	What is the number of organizations in EMEA	|	HR	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	B_where
+695	|	What is the biggest department in Germany	|	HR	|	Lookup	|	Numeric	|	O	O	O	argm	res	O	B_where
+696	|	Show the 3 biggest departments across the company	|	HR	|	Lookup	|	Numeric	|	O	O	argm	argm	res	O	O	O
+697	|	What is the biggest department	|	HR	|	Lookup	|	Numeric	|	O	O	O	argm	res
+698	|	How many open positions are available in Germany	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	O	B_where
+699	|	How many developer positions are vacant in the United States	|	HR	|	Lookup	|	Numeric	|	O	O	O	O	O	O	O	O	B_where	I_where
+700	|	In which country is the best advertisement	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	argm	O
+701	|	In which locations do the employees earn the most money	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	mea	O	argm	O
+702	|	In which countries do women earn the most money	|	HR	|	Lookup	|	Location	|	O	O	res	O	B_where	mea	O	argm	O
+703	|	Show the location where the employee satisfaction is the highest	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	mea	O	O	argm
+704	|	Show the locations where employees have to travel a lot	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	O	O	O	O
+705	|	In which countries do employees have to travel the most	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	O	O	O	argm
+706	|	Do men earn more money in APJ than women	|	HR	|	Comparison	|	Numeric	|	O	B_where	mea	oper	O	O	B_where	O	cmp
+707	|	In which countries is the employee growth the highest	|	HR	|	Calculate	|	Location	|	O	O	res	O	O	mea	mea	O	argm
+708	|	Show the employee growth in EMEA	|	HR	|	Calculate	|	Numeric	|	O	O	mea	mea	O	B_where
+709	|	How many people are managed by Bill McDermott	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	mea	O	B_where	I_where
+710	|	Christian Klein is the Manager of how many employees	|	HR	|	Lookup	|	Numeric	|	B_where	I_where	O	O	mea	O	O	oper	O
+711	|	How many employees are managed by Luka Mueller in Germany	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	mea	O	B_where	I_where	O	B_where
+712	|	Is Walldorf the biggest location of SAP	|	HR	|	Lookup	|	Numeric	|	O	B_where	O	argm	res	O	O
+713	|	Who is the Head of human resources	|	HR	|	Lookup	|	Person	|	O	O	B_where	I_where	I_where	I_where	I_where
+714	|	How many new contracts have been signed in 2016	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	mea	O	B_where
+715	|	How many new contracts have been signed by unlimited conditions in MEE	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	O	O	mea	O	B_where	I_where	O	B_where
+716	|	In which countries do we have the most signed contracts	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	O	argm	mea	O
+717	|	In which country are working the most students	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	O	argm	B_where
+718	|	Where do we have the most learning possibilities for SAP employees	|	HR	|	Lookup	|	Location	|	O	O	O	O	O	argm	B_where	O	O	O	O
+719	|	In which countries is the spend for training sessions the highest	|	HR	|	Lookup	|	Location	|	O	O	res	O	O	mea	O	B_where	O	O	argm
+720	|	How many learning sessions were offered in EMEA	|	HR	|	Lookup	|	Numeric	|	O	oper	B_where	I_where	O	O	O	B_where
+721	|	What is the headcount for DACH compared to the Nordics	|	HR	|	Comparison	|	Numeric	|	O	O	O	mea	O	cmp	O	O	O	cmp
+722	|	Compare the headcount for the sales department in Germany and USA	|	HR	|	Comparison	|	Numeric	|	O	O	mea	O	O	B_where	O	O	cmp	O	cmp
+723	|	Show the employee satisfaction between China and Singapore	|	HR	|	Comparison	|	Numeric	|	O	O	O	mea	O	cmp	O	cmp
+724	|	Show the employee satisfaction for EMEA and APJ	|	HR	|	Comparison	|	Numeric	|	O	O	O	mea	O	cmp	O	cmp
+725	|	Show the headcount for each market unit in EMEA	|	HR	|	Lookup	|	Numeric	|	O	O	mea	O	O	grpby	grpby	O	B_where
+726	|	Which market unit in EMEA has the biggest headcount	|	HR	|	Lookup	|	Location	|	O	res	res	O	B_where	O	O	argm	mea
+727	|	Compare the number of women in management positions between USA and Canada	|	HR	|	Comparison	|	Numeric	|	O	O	oper	O	B_where	O	B_where	I_where	O	cmp	O	cmp
+728	|	What are the headcount growth rates for EMEA this year	|	HR	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	B_where	B_where	I_where
+729	|	How many people were hired between this year and last year	|	HR	|	Comparison	|	Numeric	|	O	oper	O	O	B_where	O	cmp	cmp	O	cmp	cmp
+730	|	Which department has the highest satisfaction of its employees	|	HR	|	Lookup	|	Person	|	O	res	O	O	argm	mea	O	O	O
+731	|	Compare the satisfaction for managers and non managers	|	HR	|	Comparison	|	Numeric	|	O	O	mea	O	cmp	O	cmp	cmp
+732	|	What is the difference for satisfaction of employees with management and none management positions	|	HR	|	Comparison	|	Numeric	|	O	O	O	O	O	mea	O	O	O	cmp	O	cmp	cmp	cmp
+733	|	What is the difference in the salary of women in management positions and men	|	HR	|	Comparison	|	Numeric	|	O	O	O	O	O	O	mea	O	cmp	O	B_where	B_where	O	cmp
+734	|	What is the satisfaction for employees with a wage higher than 50000	|	HR	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	O	O	B_where	O	O	cmp
+735	|	What is the satisfaction for employees older than 30 years	|	HR	|	Comparison	|	Numeric	|	O	O	O	mea	O	O	B_where	O	cmp	O
+736	|	Compare the average salary for managers between North America and DACH	|	HR	|	Comparison	|	Numeric	|	O	O	oper	mea	O	B_where	O	cmp	cmp	O	cmp
+737	|	How many employees are older than 50 years	|	HR	|	Lookup	|	Numeric	|	O	oper	O	O	B_where	O	cmp	O
+738	|	What is the share of managers in EMEA	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	B_where
+739	|	Which region has the highest percentage of managers	|	HR	|	Calculate	|	Numeric	|	O	res	O	O	argm	oper	O	B_where
+740	|	What is the share for cloud department of the total headcount	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	O	O	O	mea
+741	|	How many people were hired in APJ in comparison to America	|	HR	|	Comparison	|	Numeric	|	O	oper	O	O	B_where	O	cmp	O	O	O	cmp
+742	|	Show the department in APJ which has the highest headcount	|	HR	|	Lookup	|	Person	|	O	O	res	O	B_where	O	O	O	argm	mea
+743	|	Which region in EMEA has the most L3 managers	|	HR	|	Lookup	|	Location	|	O	res	O	B_where	O	O	argm	O	B_where
+744	|	How is the women employee satisfaction in America	|	HR	|	Lookup	|	Numeric	|	O	O	O	B_where	O	mea	O	B_where
+745	|	What are the growth rates for women during the last 4 years	|	HR	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	B_where	O	O	B_where	I_where	I_where
+746	|	Display the headcount growth rates for the marketing department this year	|	HR	|	Calculate	|	Numeric	|	O	O	mea	mea	mea	O	O	B_where	O	B_where	I_where
+747	|	What is the stake of women in EMEA	|	HR	|	Calculate	|	Numeric	|	O	O	O	oper	O	B_where	O	B_where
+748	|	How many women are working in Germany compared to France	|	HR	|	Comparison	|	Numeric	|	O	oper	B_where	O	O	O	cmp	O	O	cmp
+749	|	Show the percentage of early talents in Israel	|	HR	|	Calculate	|	Numeric	|	O	O	oper	O	B_where	I_where	O	B_where
+750	|	Calculate the percentage of employees in management positions	|	HR	|	Calculate	|	Numeric	|	O	O	oper	O	O	O	B_where	I_where
+751	|	Which companies are threatening our cloud business	|	COMP	|	Lookup	|	Company	|	O	res	O	argm	O	B_where	O
+752	|	Which are the three strongest competitors in cloud software	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	argm	res	O	B_where	O
+753	|	Who is the strongest competitor in the cloud sector	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	res	O	O	B_where	O
+754	|	Which company threats our sales for HR cloud software	|	COMP	|	Lookup	|	Company	|	O	res	argm	O	O	O	B_where	I_where	O
+755	|	Which companies are threatening our sales for HR cloud software	|	COMP	|	Lookup	|	Company	|	O	res	O	argm	O	O	O	B_where	I_where	O
+756	|	Show all companies that have a higher cloud revenue	|	COMP	|	Comparison	|	Company	|	O	O	res	O	O	O	oper	B_where	mea
+757	|	Which companies have a higher cloud revenue than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	O	oper	B_where	mea	O	cmp
+758	|	Which are the companies that generate more cloud revenue as SAP	|	COMP	|	Comparison	|	Company	|	O	O	O	res	O	O	oper	B_where	mea	O	cmp
+759	|	Which companies have a higher cloud revenue compared to SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	O	oper	B_where	mea	O	O	cmp
+760	|	Show companies that have more cloud revenues as SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	O	oper	B_where	mea	O	cmp
+761	|	Which companies have more service revenues than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	oper	B_where	mea	O	cmp
+762	|	Which company threats our cloud business the most	|	COMP	|	Lookup	|	Company	|	O	res	argm	O	B_where	O	O	argm
+763	|	Who is the strongest competitor in cloud software	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	res	O	B_where	O
+764	|	Show the strongest competitor in cloud software	|	COMP	|	Lookup	|	Company	|	O	O	argm	res	O	B_where	O
+765	|	Show the companies which have more service revenue than SAP	|	COMP	|	Comparison	|	Company	|	O	O	res	O	O	oper	B_where	mea	O	cmp
+766	|	Which companies have more service revenue than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	oper	B_where	mea	O	cmp
+767	|	Which companies have more cloud revenue than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	oper	B_where	mea	O	cmp
+768	|	Show all companies which are threatening our sales for HR cloud software	|	COMP	|	Lookup	|	Company	|	O	O	res	O	O	argm	O	O	O	B_where	I_where	O
+769	|	How many companies are threatening our sales for HR cloud software	|	COMP	|	Lookup	|	Numeric	|	O	oper	O	O	argm	O	O	O	B_where	I_where	O
+770	|	How many companies are threatening our cloud business	|	COMP	|	Lookup	|	Numeric	|	O	oper	grpby	O	argm	O	B_where	O
+771	|	Show the strongest competitor in the cloud sector	|	COMP	|	Lookup	|	Company	|	O	O	argm	res	O	O	B_where	O
+772	|	Who are our competitors in the cloud software	|	COMP	|	Lookup	|	Company	|	O	O	O	res	O	O	B_where	O
+773	|	Show our main competitors in APJ	|	COMP	|	Lookup	|	Company	|	O	O	argm	res	O	B_where
+774	|	Who are our main cloud competitors in Europe	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	B_where	res	O	B_where
+775	|	How many companies are threatening our cloud business	|	COMP	|	Lookup	|	Numeric	|	O	oper	grpby	O	argm	O	B_where	O
+776	|	What is the total cloud revenue of IBM	|	COMP	|	Lookup	|	Numeric	|	O	O	O	O	B_where	mea	O	B_where
+777	|	What are the cloud growth rates by Microsoft	|	COMP	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	B_where
+778	|	What are the cloud growth rates by Microsoft compared to SAP	|	COMP	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	mea	O	cmp	O	O	cmp
+779	|	Which company has higher cloud growth rates than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	oper	B_where	mea	mea	O	cmp
+780	|	Show the competitor with the highest cloud growth rates	|	COMP	|	Calculate	|	Company	|	O	O	res	O	O	argm	B_where	mea	mea
+781	|	Which competitor has the lowest cloud costs	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	mea
+782	|	What are the top three competitors for cloud growth rates	|	COMP	|	Calculate	|	Company	|	O	O	O	argm	argm	res	O	B_where	mea	mea
+783	|	Which competitors also have double digit growth rates in the cloud business	|	COMP	|	Calculate	|	Company	|	O	res	O	O	oper	oper	mea	mea	O	O	B_where	O
+784	|	Which competitors are we facing in the on-premise sector	|	COMP	|	Lookup	|	Company	|	O	res	O	O	O	O	O	B_where	O
+785	|	Which competitor is gaining momentum in the cloud business	|	COMP	|	Calculate	|	Company	|	O	res	O	oper	oper	O	O	B_where	O
+786	|	Which competitor has the highest cloud growth rates	|	COMP	|	Calculate	|	Company	|	O	res	O	O	argm	B_where	mea	mea
+787	|	How is SAP performing in the cloud business against its competitors	|	COMP	|	Comparison	|	Numeric	|	O	O	cmp	O	O	O	B_where	O	O	O	cmp
+788	|	What are the competitors with the highest on-premise growth rates	|	COMP	|	Calculate	|	Company	|	O	O	O	res	O	O	argm	B_where	mea	mea
+789	|	What is the annually research and development spend of Microsoft	|	COMP	|	Lookup	|	Numeric	|	O	O	O	grpby	B_where	I_where	I_where	mea	O	B_where
+790	|	Which companies are having a momentum in the cloud sector	|	COMP	|	Calculate	|	Company	|	O	res	O	O	O	oper	O	O	B_where	O
+791	|	Which competitors have a higher cloud revenue than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	O	oper	B_where	mea	O	cmp
+792	|	Which companies have higher revenues in cloud software	|	COMP	|	Comparison	|	Company	|	O	res	O	oper	mea	O	B_where	O
+793	|	What was the total revenue from Netsuite in the last quarter	|	COMP	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	B_where	O	O	B_where	I_where
+794	|	Who is our biggest competitor regarding sold cloud software	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	res	O	O	B_where	O
+795	|	Which competitors have sold more cloud products than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	O	oper	B_where	O	O	cmp
+796	|	Which competitors have more cloud revenues than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	oper	B_where	mea	O	cmp
+797	|	Which competitor has the biggest revenues worldwide	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	mea	O
+798	|	Which company has the highest cloud share in the market	|	COMP	|	Calculate	|	Company	|	O	res	O	O	argm	B_where	oper	O	O	O
+799	|	Which competitor has the highest market share for cloud products	|	COMP	|	Calculate	|	Company	|	O	res	O	O	argm	O	oper	O	B_where	O
+800	|	What are the cloud revenue figures for our competitors in the last quarter	|	COMP	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	O	O	grpby	O	O	B_where	I_where
+801	|	Which competitors are having a higher cloud revenue than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	O	O	oper	B_where	mea	O	cmp
+802	|	For how many companies are the on-premise revenues bigger than SAP	|	COMP	|	Comparison	|	Numeric	|	O	O	oper	grpby	O	O	B_where	mea	oper	O	cmp
+803	|	Which company is the fiercest competitor in the cloud market	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	O	O	O	B_where	O
+804	|	Which competitor has had the highest cloud growth rates in the last quarter	|	COMP	|	Calculate	|	Company	|	O	res	O	O	O	argm	B_where	mea	mea	O	O	B_where	I_where
+805	|	What is the number of cloud customers for Oracle	|	COMP	|	Lookup	|	Numeric	|	O	O	O	oper	O	B_where	O	O	B_where
+806	|	How many cloud customers does Workday have	|	COMP	|	Lookup	|	Numeric	|	O	oper	B_where	O	O	B_where	O
+807	|	Which competitor has the most cloud customers	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	O
+808	|	Who are our top 3 competitors	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	argm	res
+809	|	Show the top 5 competitors in North America	|	COMP	|	Lookup	|	Company	|	O	O	argm	argm	res	O	B_where	I_where
+810	|	What is the difference in revenue between SAP and IBM	|	COMP	|	Comparison	|	Numeric	|	O	O	O	O	O	mea	O	cmp	O	cmp
+811	|	Show the cloud revenue for our competitors	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	O	grpby
+812	|	Show the cloud growth rates per competitor	|	COMP	|	Calculate	|	Numeric	|	O	O	B_where	mea	mea	O	grpby
+813	|	How has the cloud revenue developed in the past year for Salesforce	|	COMP	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	O	O	O	B_where	I_where	O	B_where
+814	|	Show all competitors with increasing cloud revenue growth rates in the last quarter	|	COMP	|	Calculate	|	Company	|	O	O	res	O	oper	B_where	mea	mea	mea	O	O	B_where	I_where
+815	|	For which competitors are the cloud revenue growth rates increasing	|	COMP	|	Calculate	|	Company	|	O	O	res	O	O	B_where	mea	mea	mea	oper
+816	|	Which competitor has the highest cloud revenue	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	mea
+817	|	How many competitors do we have in the cloud sector	|	COMP	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O	O	B_where	O
+818	|	Which sector has the highest number of competitors	|	COMP	|	Lookup	|	Product	|	O	res	O	O	argm	oper	O	grpby
+819	|	What is the number of competitors per sector	|	COMP	|	Lookup	|	Numeric	|	O	O	O	oper	O	grpby	O	grpby
+820	|	How many companies are operating in the cloud sector	|	COMP	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O	B_where	O
+821	|	Which is our strongest competitor in the in-memory database sector	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	res	O	O	O	B_where	O
+822	|	Which company has the biggest Research and Development investments	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	I_where	I_where	mea
+823	|	Show the three companies with the biggest marketing expenses	|	COMP	|	Lookup	|	Company	|	O	O	argm	res	O	O	argm	B_where	mea
+824	|	Which company has the highest cloud investments	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	mea
+825	|	Which company has higher cloud investments than SAP	|	COMP	|	Comparison	|	Company	|	O	res	O	oper	B_where	mea	O	cmp
+826	|	Which competitor has had the highest cloud investments in the last year	|	COMP	|	Lookup	|	Company	|	O	res	O	O	O	argm	B_where	mea	O	O	B_where	I_where
+827	|	How many competitors are we facing in the cloud sector	|	COMP	|	Lookup	|	Numeric	|	O	oper	grpby	O	O	O	O	O	B_where	O
+828	|	Which company is gaining momentum in the cloud business	|	COMP	|	Calculate	|	Company	|	O	res	O	oper	oper	O	O	B_where	O
+829	|	Which competitor has the biggest growth rates in his cloud business	|	COMP	|	Calculate	|	Company	|	O	res	O	O	argm	mea	mea	O	O	B_where	O
+830	|	How much cloud revenue has Oracle generated in the last quarter	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	B_where	O	O	O	B_where	I_where
+831	|	What is the cloud revenue for IBM in the last year	|	COMP	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where	O	O	B_where	I_where
+832	|	What are the cloud revenue figures for Microsoft	|	COMP	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	O	B_where
+833	|	Which competitor has the biggest cloud revenue	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	mea
+834	|	Tell us the biggest cloud company based on their revenue earnings	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	B_where	res	O	O	O	mea	O
+835	|	Who are the top 3 cloud companies based on revenue	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	argm	B_where	res	O	O	mea
+836	|	Based on their revenue which competitor is having the biggest figures	|	COMP	|	Lookup	|	Company	|	O	O	O	mea	O	res	O	O	O	argm	O
+837	|	What is the cloud budget for Microsoft	|	COMP	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where
+838	|	What is the cloud budget for Microsoft compared to SAP	|	COMP	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	cmp	O	O	cmp
+839	|	Does SAP have more cloud revenue than Workday	|	COMP	|	Comparison	|	Numeric	|	O	cmp	O	oper	B_where	mea	O	cmp
+840	|	Who is the biggest competitor based on the number of employees	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	res	O	O	O	oper	O	O
+841	|	Which company in our competitor list has the biggest headcount	|	COMP	|	Lookup	|	Company	|	O	res	O	O	O	O	O	O	argm	mea
+842	|	Which company has the biggest on-premise revenue	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	mea
+843	|	Show the three biggest cloud companies	|	COMP	|	Lookup	|	Company	|	O	O	argm	argm	B_where	res
+844	|	Show the cloud revenue for Microsoft in North America	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	B_where	O	B_where	I_where
+845	|	Which competitor has the highest Research and Development costs	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	I_where	I_where	mea
+846	|	Which competitor has had the biggest cloud revenues in the last two quarters	|	COMP	|	Lookup	|	Company	|	O	res	O	O	O	argm	B_where	mea	O	O	B_where	I_where	I_where
+847	|	Show the cloud revenue for Microsoft per region	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	B_where	O	grpby
+848	|	Show the cloud revenue for all competitors in the last 4 quarters	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	O	grpby	O	O	B_where	I_where	I_where
+849	|	Which competitor has the highest cloud revenue in EMEA in 2017	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	mea	O	B_where	O	B_where
+850	|	What is the revenue for Oracle in Americas compared to EMEA	|	COMP	|	Comparison	|	Numeric	|	O	O	O	mea	O	B_where	O	cmp	O	O	cmp
+851	|	Which competitor has the most database revenues	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	mea
+852	|	Which competitor is dangerous in the cloud sector	|	COMP	|	Lookup	|	Company	|	O	res	O	argm	O	O	B_where	O
+853	|	Show all companies with cloud revenue	|	COMP	|	Lookup	|	Numeric	|	O	O	res	O	B_where	mea
+854	|	What is the cloud profit for Workday in this year	|	COMP	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	B_where	O	B_where	I_where
+855	|	What is the cloud profit for Workday compared to Salesforce in this year	|	COMP	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	cmp	O	O	cmp	O	B_where	I_where
+856	|	Which competitor carries the most marketing costs	|	COMP	|	Lookup	|	Company	|	O	res	O	O	argm	B_where	mea
+857	|	Show the quarterly revenue figures for Microsoft in the past 4 quarters	|	COMP	|	Lookup	|	Numeric	|	O	O	grpby	mea	O	O	B_where	O	O	B_where	I_where	I_where
+858	|	What is the quarterly cloud revenue for Salesforce in EMEA	|	COMP	|	Lookup	|	Numeric	|	O	O	O	grpby	B_where	mea	O	B_where	O	B_where
+859	|	Show us the annually cloud costs for Microsoft	|	COMP	|	Lookup	|	Numeric	|	O	O	O	grpby	B_where	mea	O	B_where
+860	|	What is the cloud revenue per region for our competitors	|	COMP	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	O	grpby	O	O	grpby
+861	|	Which region was the strongest in cloud revenue last year among the competitors	|	COMP	|	Lookup	|	Location	|	O	res	O	O	argm	O	B_where	mea	B_where	I_where	O	O	O
+862	|	What was the strongest region regarding cloud revenue in the past 6 quarters	|	COMP	|	Lookup	|	Location	|	O	O	O	argm	res	O	B_where	mea	O	O	B_where	I_where	I_where
+863	|	In 2016 how much revenue has Workday generated in EMEA	|	COMP	|	Lookup	|	Numeric	|	O	B_where	O	O	mea	O	B_where	O	O	B_where
+864	|	What was the average cloud revenue across all competitors in the last quarter	|	COMP	|	Lookup	|	Numeric	|	O	O	O	oper	B_where	mea	O	O	O	O	O	B_where	I_where
+865	|	Show the service revenue per competitor in 2017	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	grpby	O	B_where
+866	|	What are the cloud growth rates for Microsoft	|	COMP	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	B_where
+867	|	What is the cloud revenue difference between Microsoft and Workday	|	COMP	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	O	cmp	O	cmp
+868	|	Compare the revenue for Workday and Salesforce	|	COMP	|	Comparison	|	Numeric	|	O	O	mea	O	cmp	O	cmp
+869	|	What was the revenue for Oracle in America compared to EMEA	|	COMP	|	Comparison	|	Numeric	|	O	O	O	mea	O	B_where	O	cmp	O	O	cmp
+870	|	Who is our top competitor in APJ	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	res	O	B_where
+871	|	Tell us the three biggest competitors in EMEA last year	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	argm	res	O	B_where	B_where	I_where
+872	|	In which region are we facing the biggest competitors	|	COMP	|	Lookup	|	Location	|	O	O	res	O	O	O	O	argm	res
+873	|	What is the cloud revenue of our competitors in EMEA compared to America	|	COMP	|	Comparison	|	Numeric	|	O	O	O	B_where	mea	O	O	grpby	O	cmp	O	O	cmp
+874	|	What are the cloud growth rates of our competitors per region	|	COMP	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	O	grpby	O	grpby
+875	|	Which region promises the biggest software market revenue	|	COMP	|	Lookup	|	Location	|	O	res	O	O	argm	B_where	O	mea
+876	|	Compare the software revenue of APJ and America	|	COMP	|	Comparison	|	Numeric	|	O	O	B_where	mea	O	cmp	O	cmp
+877	|	Compare the research and development costs of Workday and Salesforce for 2016	|	COMP	|	Comparison	|	Numeric	|	O	O	B_where	I_where	I_where	mea	O	cmp	O	cmp	O	B_where
+878	|	Which competitor has invested the most money into research and development	|	COMP	|	Lookup	|	Company	|	O	res	O	mea	O	argm	O	O	B_where	I_where	I_where
+879	|	Which two competitors have the highest marketing spend in this quarter	|	COMP	|	Lookup	|	Company	|	O	argm	res	O	O	argm	B_where	mea	O	B_where	I_where
+880	|	Which competitor is boosting its sales cost	|	COMP	|	Lookup	|	Company	|	O	res	O	argm	O	B_where	mea
+881	|	Show the marketing costs of our competitors in EMEA	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	O	grpby	O	B_where
+882	|	Show the marketing costs of our competitors per region	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	O	grpby	O	grpby
+883	|	Show the cloud profit per region in 2017	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	mea	O	grpby	O	B_where
+884	|	Which competitor has achieved the biggest software profit last year	|	COMP	|	Lookup	|	Company	|	O	res	O	O	O	argm	B_where	mea	B_where	I_where
+885	|	Compare the cloud profit of Microsoft and Oracle in 2016	|	COMP	|	Comparison	|	Company	|	O	O	B_where	mea	O	cmp	O	cmp	O	B_where
+886	|	What is the revenue between EMEA and America for cloud products	|	COMP	|	Comparison	|	Numeric	|	O	O	O	mea	O	cmp	O	cmp	O	B_where	mea
+887	|	Compare the cloud market of APJ and America based on their revenue	|	COMP	|	Comparison	|	Numeric	|	O	O	B_where	O	O	cmp	O	cmp	O	O	O	mea
+888	|	Compare Workday and Salesforce based on their cloud revenue in 2016	|	COMP	|	Comparison	|	Numeric	|	O	cmp	O	cmp	O	O	O	B_where	mea	O	B_where
+889	|	Compare Oracle and Microsoft regarding their marketing spend in America	|	COMP	|	Comparison	|	Numeric	|	O	cmp	O	cmp	O	O	B_where	mea	O	B_where
+890	|	Show the difference in cloud revenue between this year and last year	|	COMP	|	Comparison	|	Numeric	|	O	O	O	O	B_where	mea	O	cmp	cmp	O	cmp	cmp
+891	|	What was the cloud revenue growth of all competitors in 2016	|	COMP	|	Calculate	|	Numeric	|	O	O	O	B_where	mea	mea	O	O	grpby	O	B_where
+892	|	Which region has had the highest software growth in Q2 2017	|	COMP	|	Calculate	|	Location	|	O	res	O	O	O	argm	B_where	mea	O	B_where	I_where
+893	|	Throughout the last year who was the competitor with the strongest cloud revenue figures	|	COMP	|	Lookup	|	Company	|	O	O	B_where	I_where	O	O	O	res	O	O	argm	B_where	mea	O
+894	|	Who is the strongest cloud competitor in EMEA	|	COMP	|	Lookup	|	Company	|	O	O	O	argm	B_where	grpby	O	B_where
+895	|	Compare the cloud and software revenue for Microsoft	|	COMP	|	Comparison	|	Company	|	O	O	cmp	O	cmp	mea	O	B_where
+896	|	What was the revenue for Oracle compared to their costs last year	|	COMP	|	Comparison	|	Company	|	O	O	O	cmp	O	B_where	O	O	O	cmp	B_where	I_where
+897	|	Tell us last years software profit of Oracle	|	COMP	|	Lookup	|	Numeric	|	O	O	B_where	I_where	B_where	mea	O	B_where
+898	|	Which competitor has higher software profits Oracle or Microsoft	|	COMP	|	Comparison	|	Company	|	O	res	O	oper	B_where	mea	cmp	O	cmp
+899	|	Which region is better in cloud profit EMEA or APJ	|	COMP	|	Comparison	|	Location	|	O	res	O	oper	O	B_where	mea	cmp	O	cmp
+900	|	What are the top 3 market units for Salesforce cloud revenue	|	COMP	|	Lookup	|	Location	|	O	O	O	argm	argm	res	res	O	B_where	B_where	mea
+901	|	How has our stock price evolved in the last three months	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O	B_where	I_where	I_where
+902	|	How has our stock price evolved over the last three months	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O	B_where	I_where	I_where
+903	|	Show us the development of our stock price throughout the past two years	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea	mea	O	O	B_where	I_where	I_where
+904	|	Show us our stock price development during the past five years	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O	B_where	I_where	I_where
+905	|	Show the stock price for our top three competitors	|	STOCK	|	Lookup	|	Numeric	|	O	O	mea	mea	O	O	argm	argm	B_where
+906	|	What is the stock price for our top three competitors	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	argm	argm	B_where
+907	|	What is the stock price for our biggest competitors	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	argm	B_where
+908	|	Show our current market evaluation	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea
+909	|	What is the company index on the stock exchange	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	O	O
+910	|	What is our company index on the stock exchange	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	mea	O	O	O	O
+911	|	How is our company performing on the stock exchange	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	O	O	mea	mea
+912	|	How is SAP performing on the stock	|	STOCK	|	Lookup	|	Numeric	|	O	O	B_where	O	O	O	mea
+913	|	What is our stock index	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea
+914	|	Show stock price	|	STOCK	|	Lookup	|	Numeric	|	O	mea	mea
+915	|	Show us our stock index	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea
+916	|	Show us our current stock price	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	mea	mea
+917	|	What is the stock price for Google	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where
+918	|	Show the share price comparison against our top three competitors	|	STOCK	|	Comparison	|	Numeric	|	O	O	mea	mea	O	O	O	argm	cmp	cmp
+919	|	What is the trend of our stock price	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea	mea
+920	|	Show the trend of our stock price in the last three months	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	mea	mea	O	O	B_where	I_where	I_where
+921	|	What is the development of our stock price in the last 2 quarters	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea	mea	O	O	B_where	I_where	I_where
+922	|	What is the trend of our stock at SAP	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea	O	B_where
+923	|	How has our stock price evolved since January	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where	I_where
+924	|	How has our stock price evolved since December last year	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where	I_where	I_where	I_where
+925	|	Show the stock price development of SAP since May 2017	|	STOCK	|	Lookup	|	Numeric	|	O	O	mea	mea	O	O	B_where	B_where	I_where	I_where
+926	|	What is the stock price from SAP	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where
+927	|	What is our market evaluation	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea
+928	|	Show our company index on the stock exchange	|	STOCK	|	Lookup	|	Numeric	|	O	O	mea	mea	O	O	O	O
+929	|	Show the company index of Salesforce on the stock exchange	|	STOCK	|	Lookup	|	Numeric	|	O	O	mea	mea	O	B_where	O	O	O	O
+930	|	What is the share price comparison against our top three competitors	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	O	O	argm	cmp	cmp
+931	|	Tell us the share price comparison against our top competitors	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	O	O	argm	cmp
+932	|	What is our stock price	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea
+933	|	What is the current stock price of SAP	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	mea	mea	O	B_where
+934	|	What is our stock index right now	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O
+935	|	What is the stock price compared to the end of last month	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	O	O	cmp	cmp	cmp	cmp
+936	|	How is workday performing on the stock compared to SAP	|	STOCK	|	Comparison	|	Numeric	|	O	O	cmp	O	O	O	mea	O	O	cmp
+937	|	What is the stock price of Oracle compared to SAP	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	cmp	O	O	cmp
+938	|	Compared to Microsoft what is our stock price	|	STOCK	|	Comparison	|	Numeric	|	O	O	cmp	O	O	O	mea	mea
+939	|	What is the stock price of Workday and Salesforce	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where	O	B_where
+940	|	What is our stock performance	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea
+941	|	What is our performance on the stock	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea
+942	|	How are we performing on the stock	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea
+943	|	How are we performing on the stock compared to Oracle	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	O	O	O	mea	O	O	cmp
+944	|	How are we performing on the stock compared to competitors	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	O	O	O	mea	O	O	cmp
+945	|	Which competitors have a higher stock price than SAP	|	STOCK	|	Comparison	|	Company	|	O	res	O	O	oper	mea	mea	O	cmp
+946	|	How are we doing on the stock compared to our top three competitors	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	O	O	O	mea	O	O	O	argm	argm	cmp
+947	|	Show all competitors that have higher stock prices than SAP	|	STOCK	|	Comparison	|	Company	|	O	O	res	O	O	oper	mea	mea	O	cmp
+948	|	Which competitors have rising stock prices	|	STOCK	|	Calculate	|	Company	|	O	res	O	oper	mea	mea
+949	|	Show stock price for Oracle	|	STOCK	|	Lookup	|	Numeric	|	O	mea	mea	O	B_where
+950	|	What is our stock index compared to Workday	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	O	cmp
+951	|	What is our stock price compared to our top three competitors	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	O	O	argm	argm	cmp
+952	|	Which competitors have a better market evaluation than SAP	|	STOCK	|	Comparison	|	Company	|	O	res	O	O	oper	mea	mea	O	cmp
+953	|	How high is our stock index	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	mea	mea
+954	|	What is the growth rate of our stock index since last year	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	O	mea	mea	B_where	I_where	I_where
+955	|	What is the development of our stock price since the introduction of HANA	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	O	mea	mea	B_where	I_where	I_where	I_where	I_where
+956	|	Show the trend of our stock price for the last three months	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	O	O	mea	mea	O	O	B_where	I_where	I_where
+957	|	What was the highest stock price over the last 4 years	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	argm	mea	mea	O	O	B_where	I_where	I_where
+958	|	What was the lowest stock price over the last 8 quarters	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	argm	mea	mea	O	O	B_where	I_where	I_where
+959	|	What was the average stock index during the last 4 months	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	oper	mea	mea	O	O	B_where	I_where	I_where
+960	|	What was the average stock value throughout the last year	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	oper	mea	mea	O	O	B_where	I_where
+961	|	Show the stock prices for our top 3 competitors over the last month	|	STOCK	|	Lookup	|	Numeric	|	O	O	mea	mea	O	O	argm	argm	B_where	O	O	B_where	I_where
+962	|	What was our top stock price in the last quarter	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	oper	mea	mea	O	O	B_where	I_where
+963	|	What is the stock price trend over the last 4 months	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O	B_where	I_where	I_where
+964	|	What is our stock price compared to the end of last year	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	O	O	cmp	cmp	cmp	cmp
+965	|	What was the average stock price for SAP and IBM and Microsoft in the last quarter	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	oper	mea	mea	O	cmp	O	cmp	O	cmp	O	O	B_where	I_where
+966	|	What is the difference between the stock price of SAP and Workday	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	O	O	O	mea	mea	O	cmp	O	cmp
+967	|	What are the stock price growth rates for the last quarter	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	mea	O	O	B_where	I_where
+968	|	What was our stock price in the last four quarters	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	B_where	I_where	I_where
+969	|	How has our stock price developed throughout the last 3 months	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O	B_where	I_where	I_where
+970	|	What does the stock price development look like for the past 4 quarters	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O	O	O	B_where	I_where	I_where
+971	|	What is our current market capitalization	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	mea
+972	|	What does our market capitalization look like	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O
+973	|	What are our market capitalization figures	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O
+974	|	What is the market capitalization of Workday	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	B_where
+975	|	Which company has the highest market capitalization today	|	STOCK	|	Lookup	|	Numeric	|	O	res	O	O	argm	mea	mea	B_where
+976	|	Which company has the lowest market capitalization	|	STOCK	|	Lookup	|	Numeric	|	O	res	O	O	argm	mea	mea
+977	|	Is the stock price for SAP increasing	|	STOCK	|	Calculate	|	Numeric	|	O	O	mea	mea	O	B_where	oper
+978	|	Has our stock price increased in the last quarter	|	STOCK	|	Calculate	|	Numeric	|	O	O	mea	mea	oper	O	O	B_where	I_where
+979	|	What is our stock price trend over the past 3 months	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O	B_where	I_where	I_where
+980	|	Show the stock price for the past 3 quarters	|	STOCK	|	Lookup	|	Numeric	|	O	O	mea	mea	O	O	B_where	I_where	I_where
+981	|	What is the difference in our stock price for this year and last year	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	O	O	O	mea	mea	O	cmp	cmp	O	cmp	cmp
+982	|	Show the stock price difference between this quarter and last quarter	|	STOCK	|	Comparison	|	Numeric	|	O	O	mea	mea	O	O	cmp	cmp	O	cmp	cmp
+983	|	Show stock price for SAP and Workday	|	STOCK	|	Comparison	|	Numeric	|	O	mea	mea	O	cmp	O	cmp
+984	|	What was the stock price for SAP compared to Oracle in the last four quarters	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	cmp	O	O	cmp	O	O	B_where	I_where	I_where
+985	|	Compare the stock price for SAP to IBM	|	STOCK	|	Comparison	|	Numeric	|	O	O	mea	mea	O	cmp	O	cmp
+986	|	Which company has the biggest stock price growth rates in the last year	|	STOCK	|	Calculate	|	Company	|	O	res	O	O	argm	mea	mea	mea	mea	O	O	B_where	I_where
+987	|	For which company was the stock price growth rate the highest in the past quarter	|	STOCK	|	Calculate	|	Company	|	O	O	res	O	O	mea	mea	mea	mea	O	argm	O	O	B_where	I_where
+988	|	What are our stock growth rates for the past 3 months	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	O	B_where	I_where	I_where
+989	|	Show the stock growth rates for our top competitors	|	STOCK	|	Calculate	|	Company	|	O	O	mea	mea	mea	O	O	argm	grpby
+990	|	What are the stock index growth rates for Salesforce	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	mea	O	B_where
+991	|	What are the stock index growth rates for SAP compared to 2016	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	mea	O	B_where	O	O	cmp
+992	|	What is the stock price for SAP compared to last year	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	B_where	O	O	B_where	I_where
+993	|	Which company has the lowest stock price	|	STOCK	|	Lookup	|	Company	|	O	res	O	O	argm	mea	mea
+994	|	What was the highest rate in the last quarter	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	argm	mea	O	O	B_where	I_where
+995	|	What was our lowest stock rate in the last year	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	argm	mea	mea	O	O	B_where	I_where
+996	|	What was the highest and lowest rate for SAP in the last two quarters	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	argm	O	argm	O	O	B_where	O	O	B_where	I_where	I_where
+997	|	Show the stock rate for SAP in the last four months	|	STOCK	|	Lookup	|	Numeric	|	O	O	mea	mea	O	B_where	O	O	B_where	I_where	I_where
+998	|	What was the highest stock rate for each quarter in the last year	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	argm	mea	mea	O	O	grpby	O	O	B_where	I_where
+999	|	For each quarter in the last four years what was the average stock rate	|	STOCK	|	Lookup	|	Numeric	|	O	O	grpby	O	O	B_where	I_where	I_where	O	O	O	oper	mea	mea
+1000	|	What are the stock rates for all competitors	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	mea	mea	O	O	O
+1001	|	What is the average quarterly stock price for SAP in the last 2 years	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	oper	grpby	mea	mea	O	B_where	O	O	B_where	I_where	I_where
+1002	|	Show us the stock index for SAP compared to IBM	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	cmp	O	O	cmp
+1003	|	Compare the stock price of SAP for this quarter and last quarter	|	STOCK	|	Comparison	|	Numeric	|	O	O	mea	mea	O	B_where	O	cmp	cmp	O	cmp	cmp
+1004	|	Which company has better stock index SAP or Oracle	|	STOCK	|	Comparison	|	Company	|	O	res	O	oper	mea	mea	cmp	O	cmp
+1005	|	Compare our stock price of last year and this year	|	STOCK	|	Comparison	|	Numeric	|	O	O	mea	mea	O	cmp	cmp	O	cmp	cmp
+1006	|	Show the comparison of the stock price between IBM and Oracle	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	O	O	mea	mea	O	cmp	O	cmp
+1007	|	What is the growth rate of our stock price since this year	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	O	O	mea	mea	O	B_where	I_where
+1008	|	What is the stock price growth rate since this year	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	mea	O	B_where	I_where
+1009	|	Which company has the highest stock price growth rates	|	STOCK	|	Calculate	|	Company	|	O	res	O	O	argm	mea	mea	mea	mea
+1010	|	What is the market capitalization for Workday and Salesforce	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	cmp	O	cmp
+1011	|	What are our market capitalization growth rates for this quarter	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	mea	O	B_where	I_where
+1012	|	Which company has the highest market capitalization	|	STOCK	|	Lookup	|	Company	|	O	res	O	O	argm	mea	mea
+1013	|	Show the company with the biggest market capitalization growth rates in 2016	|	STOCK	|	Calculate	|	Company	|	O	O	res	O	O	argm	mea	mea	mea	mea	O	B_where
+1014	|	Show the average stock price per quarter in 2016	|	STOCK	|	Lookup	|	Numeric	|	O	O	oper	mea	mea	O	grpby	O	B_where
+1015	|	Show the stock price growth rates for each quarter in 2015	|	STOCK	|	Calculate	|	Numeric	|	O	O	mea	mea	mea	mea	O	O	grpby	O	B_where
+1016	|	What was the average stock price for SAP between Q1 2017 and Q2 2017	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	oper	mea	mea	O	B_where	O	B_where	I_where	O	B_where	I_where
+1017	|	What was the highest stock price for the last 4 years	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	argm	mea	mea	O	O	B_where	I_where	I_where
+1018	|	What are the stock price growth rates for each quarter within the last 2 years	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	mea	O	O	grpby	O	O	B_where	I_where	I_where
+1019	|	What was the highest and lowest stock price for the last 4 years	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	cmp	O	cmp	mea	mea	O	O	B_where	I_where	I_where
+1020	|	Show the current stock price per company	|	STOCK	|	Lookup	|	Numeric	|	O	O	B_where	mea	mea	O	grpby
+1021	|	Which company has the higher stock price SAP or Microsoft	|	STOCK	|	Comparison	|	Company	|	O	res	O	O	oper	mea	mea	cmp	O	cmp
+1022	|	Show the company with the higher market capitalization between IBM and Oracle	|	STOCK	|	Comparison	|	Company	|	O	O	res	O	O	oper	mea	mea	O	cmp	O	cmp
+1023	|	Show the stock price for Salesforce and Workday	|	STOCK	|	Comparison	|	Numeric	|	O	O	mea	mea	O	cmp	O	cmp
+1024	|	What are the stock growth rates for Microsoft and Oracle in 2017	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	cmp	O	cmp	O	B_where
+1025	|	What is the company with the biggest stock growth rates in 2016	|	STOCK	|	Calculate	|	Company	|	O	O	O	res	O	O	argm	mea	mea	mea	O	B_where
+1026	|	Name the company that has achieved the biggest stock growth rates over the past 4 quarters	|	STOCK	|	Calculate	|	Company	|	O	O	res	O	O	O	O	argm	mea	mea	mea	O	O	B_where	I_where	I_where
+1027	|	What are the stock growth rates for SAP	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	B_where
+1028	|	Show SAPs stock price for each quarter over the past 2 years	|	STOCK	|	Lookup	|	Numeric	|	O	B_where	mea	mea	O	O	grpby	O	O	B_where	I_where	I_where
+1029	|	Compare the market capitalization for SAP and Microsoft	|	STOCK	|	Comparison	|	Numeric	|	O	O	mea	mea	O	cmp	O	cmp
+1030	|	What is the latest stock price for SAP	|	STOCK	|	Lookup	|	Numeric	|	O	O	O	B_where	mea	mea	O	B_where
+1031	|	Show IBMs latest stock price	|	STOCK	|	Lookup	|	Numeric	|	O	B_where	B_where	mea	mea
+1032	|	Show the latest stock indices for all companies	|	STOCK	|	Lookup	|	Numeric	|	O	O	B_where	mea	mea	O	O	grpby
+1033	|	What is the stock price difference between Google and Facebook	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	mea	mea	O	O	cmp	O	cmp
+1034	|	Show stock indices for IBM and SAP	|	STOCK	|	Comparison	|	Numeric	|	O	mea	mea	O	cmp	O	cmp
+1035	|	Tell latest stock indices for companies Apple and Google	|	STOCK	|	Comparison	|	Numeric	|	O	B_where	mea	mea	O	O	cmp	O	cmp
+1036	|	What was the average stock price for SAP and Oracle throughout the last quarter	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	oper	mea	mea	O	cmp	O	cmp	O	O	B_where	I_where
+1037	|	What are the stock growth rates throughout the last quarter for SAP	|	STOCK	|	Calculate	|	Numeric	|	O	O	O	mea	mea	mea	O	O	B_where	I_where	O	B_where
+1038	|	Show the latest difference between the stock price of Microsoft and SAP	|	STOCK	|	Comparison	|	Numeric	|	O	O	B_where	O	O	O	mea	mea	O	cmp	O	cmp
+1039	|	What was the average stock price of IBM and Oracle in Q1 2017	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	oper	mea	mea	O	cmp	O	cmp	O	B_where	I_where
+1040	|	Which company has had the higher stock indices Microsoft or Oracle last year	|	STOCK	|	Comparison	|	Company	|	O	res	O	O	O	oper	mea	mea	cmp	O	cmp	B_where	I_where
+1041	|	Show the best stock price of IBM and SAP for this year	|	STOCK	|	Comparison	|	Numeric	|	O	O	argm	mea	mea	O	cmp	O	cmp	O	B_where	I_where
+1042	|	Show our highest stock price this year	|	STOCK	|	Lookup	|	Numeric	|	O	O	argm	mea	mea	B_where	I_where
+1043	|	What is the company with the highest stock growth rates during the last quarter	|	STOCK	|	Calculate	|	Company	|	O	O	O	res	O	O	argm	mea	mea	mea	O	O	B_where	I_where
+1044	|	Who is the company with the best stock price growth rates last quarter	|	STOCK	|	Calculate	|	Company	|	O	O	O	res	O	O	argm	mea	mea	mea	mea	B_where	I_where
+1045	|	What was the highest market capitalization between SAP and Oracle this quarter	|	STOCK	|	Comparison	|	Numeric	|	O	O	O	argm	mea	mea	O	cmp	O	cmp	B_where	I_where
+1046	|	Is the market capitalization of SAP higher than Microsoft	|	STOCK	|	Comparison	|	Numeric	|	O	O	mea	mea	O	cmp	oper	O	cmp
+1047	|	Evaluate the average stock indices for Mercedes and Audi last quarter	|	STOCK	|	Comparison	|	Numeric	|	O	O	oper	mea	mea	O	cmp	O	cmp	B_where	I_where
+1048	|	Evaluate the stock price growth rates for SAP in this quarter	|	STOCK	|	Calculate	|	Numeric	|	O	O	mea	mea	mea	mea	O	B_where	O	B_where	I_where
+1049	|	Evaluate the stock price growth rates for each quarter within the last 3 years	|	STOCK	|	Calculate	|	Numeric	|	O	O	mea	mea	mea	mea	O	O	grpby	O	O	B_where	I_where	I_where
+1050	|	Display the latest stock price growth rate for SAP	|	STOCK	|	Calculate	|	Numeric	|	O	O	B_where	mea	mea	mea	mea	O	B_where
